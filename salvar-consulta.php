@@ -31,13 +31,17 @@
                             '{$descricao}', 
                             '{$id_medico}', 
                             '{$id_paciente}')";
+
+            $res = $conn->query($sql);
     
             // Executa a query
-            if ($conn->query($sql) === TRUE) {
-                echo "Consulta cadastrada com sucesso!";
+            if ($res == true) {
+                print "<script>alert('Consulta cadastrada com sucesso!')</script>";
+                print "<script>location.href='?page=listar-consulta'</script>";
             } else {
-                echo "Erro ao cadastrar consulta: " . $conn->error; // Mensagem de erro
-            }
+                print "<script>alert('Erro ao cadastrar consulta !')</script>";
+                print "<script>location.href='?page=listar-consulta'</script>";
+            };
             break;
     }
     

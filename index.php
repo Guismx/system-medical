@@ -47,21 +47,10 @@
         border-color: rgb(255 255 255);
         color: rgb(33 37 41);
       }
-      .banner-inicial img {
-        height: 400px;
-        overflow: hidden;
-      }
-      .banner {
-        width: 100%;
-      }
-      .banner img {
-        width: 100%;
-        height: 400px;
-      }
       .section {
       display: none;
       padding: 20px;
-    }
+      }
 
     .active {
       display: block;
@@ -138,33 +127,6 @@
 </nav> 
 <div class="container-fluidcolor-line"></div>
 
-<div class="banner">
-  <img src="assets/banner1.png" alt="">
-</div>
-  <!-- Menu de navegação -->
-  <div class="menu-home">
-    <a onclick="showSection('pagina1')">Pacientes</a>
-    <a onclick="showSection('pagina2')">Médicos</a>
-    <a onclick="showSection('pagina3')">Consultas</a>
-  </div>
-
-  <!-- Seções de conteúdo -->
-<div class="pages-home">
-  <div id="pagina1" class="section active">
-    asdas
-    </div>
-
-    <div id="pagina2" class="section">
-      <h2>Página 2</h2>
-      <p>Conteúdo da Página 2.</p>
-    </div>
-
-    <div id="pagina3" class="section">
-      <h2>Página 3</h2>
-      <p>Conteúdo da Página 3.</p>
-    </div>
-</div>
-
 <div class="container">
     <div class="row mt-3">
         <div class="col">
@@ -218,6 +180,34 @@
         </div>
     </div>
 </div>
+ <!-- Menu de navegação -->
+  <div class="menu-home">
+    <a onclick="showSection('pagina1')">Pacientes</a>
+    <a onclick="showSection('pagina2')">Médicos</a>
+    <a onclick="showSection('pagina3')">Consultas</a>
+  </div>
+
+  <!-- Seções de conteúdo -->
+<div class="pages-home">
+  <div id="pagina1" class="section active">
+    PAGES-HOME INDEX.PHP
+    </div>
+
+    <div id="pagina2" class="section">
+      <?php
+       switch (@$_REQUEST['page']) {
+        default:
+            include('listar-medico.php');
+          };
+      ?>
+    </div>
+
+    <div id="pagina3" class="section">
+      <h2>Página 3</h2>
+      <p>Conteúdo da Página 3.</p>
+    </div>
+</div>
+
   <!-- JavaScript para alternar seções -->
   <script>
     function showSection(sectionId) {
@@ -227,7 +217,7 @@
 
       // Mostra a seção selecionada
       document.getElementById(sectionId).classList.add('active');
-    }
+    };
   </script>
   <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
 </body>
