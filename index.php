@@ -57,12 +57,14 @@
     }
     .menu-home {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
+      max-width: 1200px;
+      flex-direction: center;
+      margin: 0 auto;
+
     }
     .menu-home a {
       display: flex;
-      width: 100%;
+      width: 400px;
       justify-content: center;
       align-items: center;
       cursor: pointer;
@@ -114,7 +116,7 @@
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="?page=cadastrar-consulta">Cadastrar</a></li>
-            <li><a class="dropdown-item" href="?page=listar=consulta">Listar</a></li>
+            <li><a class="dropdown-item" href="?page=listar-consulta">Listar</a></li>
           </ul>
         </li>
       </ul>
@@ -180,7 +182,12 @@
         </div>
     </div>
 </div>
- <!-- Menu de navegação -->
+
+<?php
+// Verifique se a página atual é 'home.php' (ou se o parâmetro 'page' está vazio ou definido como 'home')
+if (!isset($_REQUEST['page']) || $_REQUEST['page'] == 'home') {
+?>
+  <!-- Menu de navegação -->
   <div class="menu-home">
     <a onclick="showSection('pagina1')">Pacientes</a>
     <a onclick="showSection('pagina2')">Médicos</a>
@@ -188,25 +195,36 @@
   </div>
 
   <!-- Seções de conteúdo -->
-<div class="pages-home">
-  <div id="pagina1" class="section active">
-    PAGES-HOME INDEX.PHP
+  <div class="pages-home">
+    <div id="pagina1" class="section active">
+    <?php
+        // Aqui você pode incluir a listagem de médicos
+        switch (@$_REQUEST['page']) {
+          default:
+            include('listar-paciente.php');
+        }
+      ?>
     </div>
 
     <div id="pagina2" class="section">
       <?php
-       switch (@$_REQUEST['page']) {
-        default:
+        // Aqui você pode incluir a listagem de médicos
+        switch (@$_REQUEST['page']) {
+          default:
             include('listar-medico.php');
-          };
+        }
       ?>
     </div>
 
     <div id="pagina3" class="section">
-      <h2>Página 3</h2>
-      <p>Conteúdo da Página 3.</p>
-    </div>
-</div>
+    <?php
+        // Aqui você pode incluir a listagem de médicos
+        switch (@$_REQUEST['page']) {
+          default:
+            include('listar-consulta.php');
+        }
+      ?>
+  </div>
 
   <!-- JavaScript para alternar seções -->
   <script>
@@ -219,6 +237,9 @@
       document.getElementById(sectionId).classList.add('active');
     };
   </script>
+<?php
+}
+?>
   <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
