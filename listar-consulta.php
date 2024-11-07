@@ -1,8 +1,8 @@
 <style>
 	h1 {
-	color: red;
+	color: #00ffe0a6;
 	text-align: center; /* Centraliza o texto dentro do h1 */
-	background: #fff;
+	background: linear-gradient(to right, #0c0c0c, rgb(29, 29, 29), rgb(29, 29, 29), #0c0c0c);
 	max-width: 1200px; /* Largura máxima */
 	margin: 0 auto; /* Centraliza o h1 na tela */
 	}
@@ -33,7 +33,7 @@
 	}
 </style>
 
-<h1>Listar Consulta</h1>
+<h1>Listar Consulta<h1>
 <?php
 	$sql = "
     SELECT 

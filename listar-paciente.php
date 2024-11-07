@@ -1,12 +1,12 @@
 <style>
 	h1 {
-	color: red;
+	color: #00ffe0a6;
 	text-align: center; /* Centraliza o texto dentro do h1 */
 	background: #fff;
 	max-width: 1200px; /* Largura máxima */
 	margin: 0 auto; /* Centraliza o h1 na tela */
 	}
-	
+
 	p {
 	margin-top: 0;
 	margin-bottom: 1rem;
@@ -33,7 +33,7 @@
 	}
 </style>
 
-<h1>Listar Paciente</h1>
+<h1>Listar Paciente<h1>
 <?php
 	$sql = "SELECT * FROM `paciente`";
 

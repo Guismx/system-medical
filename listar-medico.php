@@ -1,6 +1,6 @@
 <style>
 	h1 {
-	color: red;
+	color: #00ffe0a6;
 	text-align: center; /* Centraliza o texto dentro do h1 */
 	background: #fff;
 	max-width: 1200px; /* Largura máxima */
@@ -8,6 +8,7 @@
 	}
 
 	p {
+	color: white;
 	margin-top: 0;
 	margin-bottom: 1rem;
 	display: block;
