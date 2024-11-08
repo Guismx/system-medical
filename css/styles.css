@@ -5,25 +5,20 @@
     margin: 0 auto;
     margin-top: 2rem;
 }
-
-
 .servicos-carousel {
     position: relative;
     width: 100%;
     overflow: hidden;
 }
-
 .servicos-index {
     display: flex;
     transition: transform 0.5s ease;
 }
-
 .pagina {
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
-
 .card-index {
     margin: 1rem;
     padding: 10px;
@@ -48,7 +43,6 @@
     height: 150px;
     border-radius: 10px;
 }
-
 .carousel-controls {
     text-align: center;
 }
@@ -80,7 +74,6 @@
     border-radius: 10px;
     border: 1px solid #00ffe0a6 ;
 }
-
 .carousel-controls button {
     border-radius: 50%;
     background-color: rgb(37, 37, 37);
@@ -92,7 +85,7 @@
     font-size: 18px;
 }
 .carousel-controls button:hover {
-    color: #00ffe0a6;
+    color: #00ffe1a6;
 }
 
 
