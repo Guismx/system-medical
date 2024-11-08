@@ -7,29 +7,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     
-
 <style>
-      body {
-        background:linear-gradient(to right, #0c0c0c, rgb(29, 29, 29), rgb(29, 29, 29), #0c0c0c);
-        color: white;
-      }
-      .container-fluidcolor-line {
-      background: linear-gradient(to right, #d6daff, #00ffe0a6, #00ffe0a6, #d6daff);
-      height: 3px;
-      width: 100%;
-      }
-      .container-nav {
-      display: flex;
-      justify-content: center; 
-      align-items: center; 
-      max-width: 1200px;
-      width: 100%;
-      margin: 0 auto; 
-      padding: 0; 
-      gap: 2rem; /* Espaçamento entre os itens */
-      padding-right: 5px; /* Padding específico à direita */
-      }
-
       .navbar-nav .nav-link.active {
         color: #00ffe0a6;
       }
@@ -118,7 +96,7 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <a class="nav-link active" aria-current="page" href="index.php">Inicio</a>
             <a class="nav-link active" aria-current="page" href="#servicos">Serviços</a>               
-            <a class="nav-link" href="#" role="button" aria-expanded="false">Equipe</a>
+            <a class="nav-link" href="#equipe" role="button" aria-expanded="false">Equipe</a>
             <a class="nav-link" href="#" role="button" aria-expanded="false">Localização</a>
             <a class="nav-link" href="#" role="button" aria-expanded="false">Sobre</a>
             <a class="nav-link" href="login.php">Login</a>
@@ -204,16 +182,42 @@
   </div>
 </div>
 
-<div class="container-equipe"> 
+<div class="container-equipe" id="equipe"> 
   <div class="banner-equipe">
     <div class="dado-equipe">
-      <img src="./assets/consulta-geral.png" alt="">
-      <h1>Nome</h1>
-      <h5>Especialidade</h5>
-      <h5>CRM</h5>
+      <img src="./assets/medico-1.png" alt="">
+      <h6>Dra. Anna Luiza</h6>
+      <p>Cardiologista</p>
+      <p>XXX.XXX.XXX</p>
+    </div>
+    
+    <div class="infor-equipe">
+      <p>
+        Dra. Anna é cardiologista clínica e intervencionista, formada pela Universidade de São Paulo (USP) e com especialização em cardiologia intervencionista pelo Instituto Dante Pazzanese de Cardiologia. Com vasta experiência em instituições renomadas como o Hospital do Coração (HCor) e o Hospital Albert Einstein, Dra. Anna é especializada em procedimentos como cateterismo cardíaco e angioplastia, além de realizar atendimentos clínicos para pacientes com doenças cardiovasculares. Ao longo de sua carreira, ela também atuou na prevenção e educação em saúde cardíaca, completando capacitações em arritmias e suporte avançado de vida em cardiologia.</p>
+    </div>
+  </div>
+
+  <div class="banner-equipe2">
+  <div class="infor-equipe2">
+      <p>Dra. Anna é cardiologista clínica e intervencionista, formada pela Universidade de São Paulo (USP) e com especialização em cardiologia intervencionista pelo Instituto Dante Pazzanese de Cardiologia. Com vasta experiência em instituições renomadas como o Hospital do Coração (HCor) e o Hospital Albert Einstein, Dra. Anna é especializada em procedimentos como cateterismo cardíaco e angioplastia, além de realizar atendimentos clínicos para pacientes com doenças cardiovasculares. Ao longo de sua carreira, ela também atuou na prevenção e educação em saúde cardíaca, completando capacitações em arritmias e suporte avançado de vida em cardiologia.</p>
+    </div>
+    <div class="dado-equipe2">
+      <img src="./assets/medico-1.png" alt="">
+      <h6>Dra. Anna Luiza</h6>
+      <p>Cardiologista</p>
+      <p>XXX.XXX.XXX</p>
+    </div>
+  </div>
+
+  <div class="banner-equipe">
+    <div class="dado-equipe">
+      <img src="./assets/medico-1.png" alt="">
+      <h6>Dra. Anna Luiza</h6>
+      <p>Cardiologista</p>
+      <p>XXX.XXX.XXX</p>
     </div>
     <div class="infor-equipe">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, accusamus autem modi eos quisquam tenetur consequuntur. Delectus libero dolorem earum velit sint aperiam? Tenetur repellendus numquam provident quos itaque ipsam.</p>
+      <p>Dra. Anna é cardiologista clínica e intervencionista, formada pela Universidade de São Paulo (USP) e com especialização em cardiologia intervencionista pelo Instituto Dante Pazzanese de Cardiologia. Com vasta experiência em instituições renomadas como o Hospital do Coração (HCor) e o Hospital Albert Einstein, Dra. Anna é especializada em procedimentos como cateterismo cardíaco e angioplastia, além de realizar atendimentos clínicos para pacientes com doenças cardiovasculares. Ao longo de sua carreira, ela também atuou na prevenção e educação em saúde cardíaca, completando capacitações em arritmias e suporte avançado de vida em cardiologia.</p>
     </div>
   </div>
 </div>

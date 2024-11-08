@@ -1,3 +1,96 @@
+body {
+    background:linear-gradient(to right, #0c0c0c, rgb(29, 29, 29), rgb(29, 29, 29), #0c0c0c);
+    color: white;
+}
+.container-fluidcolor-line {
+    background: linear-gradient(to right, #d6daff, #00ffe0a6, #00ffe0a6, #d6daff);
+    height: 3px;
+    width: 100%;
+}
+.container-nav {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto; 
+    padding: 0; 
+    gap: 2rem; /* Espaçamento entre os itens */
+    padding-right: 5px; /* Padding específico à direita */
+}
+.navbar-nav .nav-link.active {
+    color: #00ffe0a6;
+}
+.navbar-nav .nav-link.active:hover{
+    color:white;
+}
+.nav-link {
+    color: #00ffe0a6;
+}
+.nav-link:hover {
+    color: white;
+}
+.dropdown-item {
+    color: #00ffe0a6;
+}
+.dropdown-menu.show{
+    background: #18211e;
+}
+.form-control {
+    background: rgb(235, 255, 255);
+}
+.btn {
+    background: rgb(33 37 41);
+    border-color: #00ffe0a6;
+    color: #00ffe0a6;
+}
+.btn:hover {
+    background: #00ffe0a6;
+    border-color: rgb(255 255 255);
+    color: rgb(33 37 41);
+}
+.section {
+    display: none;
+    padding: 20px;
+}
+
+.active {
+    display: block;
+}
+.menu-home {
+    display: flex;
+    max-width: 1200px;
+    flex-direction: center;
+    margin: 0 auto;
+
+}
+.menu-home a {
+    display: flex;
+    width: 400px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 30px;
+    }
+.menu-home a:hover {
+    border-bottom: 2px solid #00ffe0a6;
+}
+        /* Estilo do container do banner */
+.banner {
+    width: 100%; /* O banner ocupa toda a largura da página */
+    height: 400px; /* Defina a altura do banner conforme necessário */
+    display: flex; /* Usa Flexbox para centralizar o conteúdo dentro do banner */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    overflow: hidden; /* Garante que qualquer parte da imagem que ultrapasse seja oculta */
+}
+      /* Estilo da imagem dentro do banner */
+.banner img {
+    max-width: 1200px;
+    width: 1200px;  /* A imagem vai cobrir toda a largura do banner */
+    height: 100%; /* A imagem vai cobrir toda a altura do banner */
+    object-fit: cover; /* Faz com que a imagem cubra a área sem distorcer */
+}
 .container-servicos {
     color: rgb(255, 255, 255);
     background-color: transparend;
@@ -5,6 +98,7 @@
     margin: 0 auto;
     margin-top: 2rem;
 }
+
 .servicos-carousel {
     position: relative;
     width: 100%;
@@ -85,7 +179,80 @@
     font-size: 18px;
 }
 .carousel-controls button:hover {
-    color: #00ffe1a6;
+    color: #00ffe0a6;
 }
 
+.container-equipe {
+    margin: 0 auto;
+    padding: 1rem;
+    max-width: 1200px;
+}
+.banner-equipe {
+    background: linear-gradient(to right, #0c0c0c, rgb(29, 29, 29), rgb(29, 29, 29), #0c0c0c);
+    border-radius: 20px;
+    width: 100%;
+    color: white;;
+    display: flex;
+    padding: 2rem;
+    gap: 2rem;
+    margin-top: 1rem;
+    box-shadow: 2px 2px 2px #00ffe0a6;
+}
+.dado-equipe {
+    max-width: 400px;
+    width: 380px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(37, 37, 37);
+}
+.dado-equipe img {
+    border-radius: 20px;
+    width: 270px;
+    height: 200px;
+    background: linear-gradient(to right, #0c0c0c, rgb(29, 29, 29), rgb(29, 29, 29), #0c0c0c);
+    padding: 2rem;
+    box-shadow: 1px 1px 1px #00ffe0a6;
+    margin-bottom: 10px;
+}
+.infor-equipe {
+    display: flex;
+    max-width: 800px;
+    justify-content: center;
+}
 
+.banner-equipe2 {
+    background: linear-gradient(to right, #0c0c0c, rgb(29, 29, 29), rgb(29, 29, 29), #0c0c0c);
+    border-radius: 20px;
+    width: 100%;
+    color: white;;
+    display: flex;
+    padding: 2rem;
+    gap: 2rem;
+    margin-top: 1rem;
+    box-shadow: -2px 2px 2px #00ffe0a6;
+}
+.dado-equipe2 {
+    max-width: 400px;
+    width: 380px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(37, 37, 37);
+}
+.dado-equipe2 img {
+    border-radius: 20px;
+    width: 270px;
+    height: 200px;
+    background: linear-gradient(to right, #0c0c0c, rgb(29, 29, 29), rgb(29, 29, 29), #0c0c0c);
+    padding: 2rem;
+    margin-bottom: 10px;
+    box-shadow: -1px 1px 1px #00ffe0a6;
+}
+.infor-equipe2 {
+    display: flex;
+    max-width: 800px;
+    justify-content: center;
+}
