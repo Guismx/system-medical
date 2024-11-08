@@ -181,7 +181,6 @@ body {
 .carousel-controls button:hover {
     color: #00ffe0a6;
 }
-
 .container-equipe {
     margin: 0 auto;
     padding: 1rem;
@@ -221,7 +220,6 @@ body {
     max-width: 800px;
     justify-content: center;
 }
-
 .banner-equipe2 {
     background: linear-gradient(to right, #0c0c0c, rgb(29, 29, 29), rgb(29, 29, 29), #0c0c0c);
     border-radius: 20px;
@@ -255,4 +253,21 @@ body {
     display: flex;
     max-width: 800px;
     justify-content: center;
+}
+.container-localizacao {
+    margin: 0 auto;
+    padding: 1rem;
+    max-width: 1200px;
+    display: flex;
+    color: white;
+    gap: 2rem;
+}
+.localizacao-mapa {
+    max-width: 800px;
+    max-height: 500px;
+}
+.img-loja img{
+    max-width: 400px;
+    width: 100%;
+    height: 190px;
 }

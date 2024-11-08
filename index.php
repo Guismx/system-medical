@@ -97,7 +97,7 @@
             <a class="nav-link active" aria-current="page" href="index.php">Inicio</a>
             <a class="nav-link active" aria-current="page" href="#servicos">Serviços</a>               
             <a class="nav-link" href="#equipe" role="button" aria-expanded="false">Equipe</a>
-            <a class="nav-link" href="#" role="button" aria-expanded="false">Localização</a>
+            <a class="nav-link" href="#localizacao" role="button" aria-expanded="false">Localização</a>
             <a class="nav-link" href="#" role="button" aria-expanded="false">Sobre</a>
             <a class="nav-link" href="login.php">Login</a>
           </li>
@@ -188,7 +188,7 @@
       <img src="./assets/medico-1.png" alt="">
       <h6>Dra. Anna Luiza</h6>
       <p>Cardiologista</p>
-      <p>XXX.XXX.XXX</p>
+      <p><b>CRM:</b> XXX.XXX.XXX</p>
     </div>
     
     <div class="infor-equipe">
@@ -205,7 +205,7 @@
       <img src="./assets/medico-1.png" alt="">
       <h6>Dra. Anna Luiza</h6>
       <p>Cardiologista</p>
-      <p>XXX.XXX.XXX</p>
+      <p><b>CRM: </b>XXX.XXX.XXX</p>
     </div>
   </div>
 
@@ -214,7 +214,7 @@
       <img src="./assets/medico-1.png" alt="">
       <h6>Dra. Anna Luiza</h6>
       <p>Cardiologista</p>
-      <p>XXX.XXX.XXX</p>
+      <p><b>CRM: </b>XXX.XXX.XXX</p>
     </div>
     <div class="infor-equipe">
       <p>Dra. Anna é cardiologista clínica e intervencionista, formada pela Universidade de São Paulo (USP) e com especialização em cardiologia intervencionista pelo Instituto Dante Pazzanese de Cardiologia. Com vasta experiência em instituições renomadas como o Hospital do Coração (HCor) e o Hospital Albert Einstein, Dra. Anna é especializada em procedimentos como cateterismo cardíaco e angioplastia, além de realizar atendimentos clínicos para pacientes com doenças cardiovasculares. Ao longo de sua carreira, ela também atuou na prevenção e educação em saúde cardíaca, completando capacitações em arritmias e suporte avançado de vida em cardiologia.</p>
@@ -223,7 +223,22 @@
 </div>
 
 
-
+<div class="container-localizacao" id="localizacao">
+      <div class="localizacao-mapa">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d347290.35293727944!2d8.324882787586263!3d47.153822030601965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47900a0862cee21b%3A0xcbd18db34aeffa82!2sHealth%20%26%20Medical%20Service%20AG!5e0!3m2!1sen!2sbr!4v1731094945395!5m2!1sen!2sbr" width="800" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="informacoes-localizacao">
+        <h5><b>Endereço: </b></h5>
+        <p>Rua da Saúde, 123, Bairro Central, São Lucas - SP, CEP 12345-678</p>
+        <h5><b>Contato: </b></h5>
+        <p>(11) 98755-4321</p>
+        <h5><b>Horário de Funcionamento: </b></h5>
+        <p>Segunda a Sexta, das 7h às 18h; Sábado, das 8h às 13h</p>
+        <div class="img-loja">
+          <img src="https://casaeconstrucao.org/wp-content/uploads/2024/02/Fonte-Pinterest-4-31.jpg" alt="">
+        </div>
+      </div>
+</div>
 
 
 
