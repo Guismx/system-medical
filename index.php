@@ -182,7 +182,9 @@
   </div>
 </div>
 
-<div class="container-equipe" id="equipe"> 
+<div class="container-equipe" id="equipe">
+  <h3>Nossa Equipe</h3>
+  <div class="container-fluidcolor-line"></div> 
   <div class="banner-equipe">
     <div class="dado-equipe">
       <img src="./assets/medico-1.png" alt="">
@@ -223,23 +225,28 @@
 </div>
 
 
-<div class="container-localizacao" id="localizacao">
-      <div class="localizacao-mapa">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d347290.35293727944!2d8.324882787586263!3d47.153822030601965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47900a0862cee21b%3A0xcbd18db34aeffa82!2sHealth%20%26%20Medical%20Service%20AG!5e0!3m2!1sen!2sbr!4v1731094945395!5m2!1sen!2sbr" width="800" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<div class="container-localizacao-geral" id="localizacao">
+  <div>
+    <h3>Localização</h3>
+    <div class="container-fluidcolor-line"></div> 
+  </div>
+
+  <div class="container-localizacao">
+    <div class="localizacao-mapa">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d347290.35293727944!2d8.324882787586263!3d47.153822030601965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47900a0862cee21b%3A0xcbd18db34aeffa82!2sHealth%20%26%20Medical%20Service%20AG!5e0!3m2!1sen!2sbr!4v1731094945395!5m2!1sen!2sbr" width="800" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
       <div class="informacoes-localizacao">
-        <h5><b>Endereço: </b></h5>
-        <p>Rua da Saúde, 123, Bairro Central, São Lucas - SP, CEP 12345-678</p>
-        <h5><b>Contato: </b></h5>
-        <p>(11) 98755-4321</p>
-        <h5><b>Horário de Funcionamento: </b></h5>
-        <p>Segunda a Sexta, das 7h às 18h; Sábado, das 8h às 13h</p>
-        <div class="img-loja">
-          <img src="https://casaeconstrucao.org/wp-content/uploads/2024/02/Fonte-Pinterest-4-31.jpg" alt="">
+          <h5><b>Endereço: </b></h5>
+          <p>Rua da Saúde, 123, Bairro Central, São Lucas - SP, CEP 12345-678</p>
+          <h5><b>Contato: </b></h5>
+          <p>(11) 98755-4321</p>
+          <h5><b>Horário de Funcionamento: </b></h5>
+          <p>Segunda a Sexta, das 7h às 18h; Sábado, das 8h às 13h</p>
+          <div class="img-loja">
+            <img src="https://casaeconstrucao.org/wp-content/uploads/2024/02/Fonte-Pinterest-4-31.jpg" alt="">
         </div>
-      </div>
+  </div>
 </div>
-
 
 
 
