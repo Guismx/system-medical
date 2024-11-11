@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MGC Clinic</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">    
 <style>
       .navbar-nav .nav-link.active {
         color: #00ffe0a6;
@@ -66,8 +65,8 @@
         border-bottom: 2px solid #00ffe0a6;
       }
 </style>
-
 </head>
+
 <body>
 <nav class="navbar navbar-expand-lg bg-dark">
    <div class="container-nav">
@@ -207,17 +206,16 @@
 </div>
 
 
-<div class="container-localizacao-geral" id="localizacao">
+<div class="container-localizacao">
   <div>
     <h3>Localização</h3>
     <div class="container-fluidcolor-line"></div> 
   </div>
-
-  <div class="container-localizacao">
+  <div class="container-into-localizacao">
     <div class="localizacao-mapa">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d347290.35293727944!2d8.324882787586263!3d47.153822030601965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47900a0862cee21b%3A0xcbd18db34aeffa82!2sHealth%20%26%20Medical%20Service%20AG!5e0!3m2!1sen!2sbr!4v1731094945395!5m2!1sen!2sbr" width="800" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-      <div class="informacoes-localizacao">
+    </div>
+    <div class="informacoes-localizacao">
           <h5><b>Endereço: </b></h5>
           <p>Rua da Saúde, 123, Bairro Central, São Lucas - SP, CEP 12345-678</p>
           <h5><b>Contato: </b></h5>
@@ -227,15 +225,16 @@
           <div class="img-loja">
             <img src="https://casaeconstrucao.org/wp-content/uploads/2024/02/Fonte-Pinterest-4-31.jpg" alt="">
         </div>
+    </div>
   </div>
 </div>
 
-
-
-
 <div class="container-sobre" id="sobre">
-  <h3>Sobre nós</h3>
-  <div class="container-fluidcolor-line"></div>
+  <div class="container-into">
+  <div>
+    <h3>Sobre nós</h3>
+    <div class="container-fluidcolor-line"></div>
+  </div>
   <div class="sobre-principal">
     <p>A <b style="color: #00ffe0a6">MGC Clinic</b> foi fundada com o propósito de oferecer um atendimento médico de excelência, pautado no compromisso com a saúde e bem-estar dos nossos pacientes. Ao longo dos anos, crescemos e nos consolidamos como uma clínica de referência na região, sempre investindo em inovação e em uma equipe de profissionais altamente qualificados. Desde a nossa inauguração, buscamos integrar tecnologia de ponta e um atendimento humanizado, com a missão de proporcionar cuidado médico integral em todas as fases da vida. Através de uma gestão eficiente e uma visão voltada para a qualidade, a <b style="color: #00ffe0a6">MGC Clinic</b> se tornou um espaço confiável e acolhedor, onde nossos pacientes encontram não apenas tratamentos especializados, mas também um atendimento dedicado e personalizado. Nossa trajetória é marcada pela busca constante por melhorias, pela construção de uma rede de confiança com nossos pacientes e pela promoção da saúde com ética, respeito e competência.</p>
     <img src="assets/equipe-medicos.png.png" alt="">
@@ -267,8 +266,49 @@
       Atenção personalizada: Cada pessoa é única, por isso, oferecemos um atendimento que respeita as especificidades de cada paciente.</p>
     </div>
   </div>
+  </div>
+</div>
 
+<footer>
+  <div class="rodape">
+      <div class="into-rodape">
+        <div class="info-page-rodape">
+          <ul>
+            <li><a href="">Inicio</a></li>
+            <li><a href="">Serviços</a></li>
+            <li><a href="">Equipe</a></li>
+            <li><a href="">Localização</a></li>
+            <li><a href="">Sobre</a></li>
+          </ul>
+        </div>
+        <div class="info-clinica-rodape">
+          <ul>
+            <li><b>INFORMAÇÕES</b></li>
+            <li>Política de Privacidade</li>
+            <li>Política de cookies</li>
+          </ul>
+        </div>
+        <div class="info-atendimentos-rodape">
+          <ul>
+              <li><b>ATENDIMENTOS</b></li>
+              <li>61 XXXX-XXXX</li>
+              <li>61 XXXX-XXXX</li>
+              <li>mgc@gmail.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="receber-novidades-rodape">
+        <h3>RECEBER NOVIDADES</h3>
+          <form>
+            <label for="email"><b>Digite seu e-mail</b></label>
+            <input type="email" name="email" id="email" />
+            <button>Enviar</button>
+          </form>
+      </div>
+  </div>
+</footer>
 <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
 <script src="javascript.js"></script>
 </body>
+
 </html>

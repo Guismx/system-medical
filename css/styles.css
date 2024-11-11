@@ -76,7 +76,6 @@ body {
 }
 .container-banner {
     display: flex;
-    background-color: red;
     justify-content: center;
 }
 .container-banner img {
@@ -258,28 +257,21 @@ body {
 .expand-btn:hover {
     text-decoration: underline;
 }
-.container-localizacao-geral {
-    display: flex;
-    flex-direction: column;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1rem;
-    gap: 1rem;
-}
-.container-localizacao-geral h3 {
-    color: white;
-    width: 100%;
-    height: 40px;
-}
+
 .container-localizacao {
     margin: 0 auto;
     max-width: 1200px;
+    flex-direction: column;
     display: flex;
     color: white;
     gap: 2rem;
     background: linear-gradient(to right, #0c0c0c, rgb(29, 29, 29), rgb(29, 29, 29), #0c0c0c);
     padding: 1rem;
     border-radius: 10px;
+}
+.container-into-localizacao {
+    display: flex;
+    gap: 1rem;
 }
 .localizacao-mapa {
     max-width: 800px;
@@ -304,8 +296,15 @@ body {
 .sobre-principal img {
     width: 25%;
 }
-.container-sobre .container-fluidcolor-line {
-    margin-bottom: 1rem;
+.container-sobre {
+    width: 100%;
+}
+.container-into {
+    max-width: 1200px;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 1rem;
+    background:linear-gradient(to right, #0c0c0c, rgb(29, 29, 29), rgb(29, 29, 29), #0c0c0c);
 }
 .cards-sobre {
     display: flex;
@@ -346,4 +345,42 @@ body {
     max-height: 100px;
     height: 100px;
     overflow: hidden;
+}
+
+footer {
+    display: flex;
+    background: rgb(0, 0, 0);
+    width: 100% !important;
+    align-items: center;
+    padding: 1rem;
+}
+.rodape {
+    color: white;
+    display: flex;
+    max-width: 1200px;
+    width: 1200px;
+    max-height: 400px;
+    height: 300px;
+    margin: 0 auto;
+    padding: 1rem;
+    border-radius: 10px;
+    background:linear-gradient(to right, #0c0c0c, rgb(29, 29, 29), rgb(29, 29, 29), #0c0c0c);
+    justify-content: space-between;
+}
+.into-rodape {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    margin-left: none;
+    justify-content: initial;
+}
+.rodape ul li {
+    list-style: none;
+    padding: 0;
+}
+.receber-novidades-rodape {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
 }
