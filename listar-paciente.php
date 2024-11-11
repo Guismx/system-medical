@@ -1,10 +1,10 @@
 <style>
 	h1 {
 	color: #00ffe0a6;
-	text-align: center; /* Centraliza o texto dentro do h1 */
+	text-align: center;
 	background: #fff;
-	max-width: 1200px; /* Largura máxima */
-	margin: 0 auto; /* Centraliza o h1 na tela */
+	max-width: 1200px; 
+	margin: 0 auto;
 	}
 
 	p {
@@ -17,10 +17,10 @@
 	table {
 	font-size: 14px;
 	font-weight: normal;
-	max-width: 1200px; /* Definindo a largura máxima */
-	width: 100%; /* Garantir que a tabela ocupe 100% da largura disponível até o limite de 1200px */
-	margin: 0 auto; /* Centraliza a tabela horizontalmente */
-	padding: 0; /* Remover qualquer padding padrão */
+	max-width: 1200px;
+	width: 100%; 
+	margin: 0 auto; 
+	padding: 0; 
 	}
 
 	th {

@@ -65,22 +65,6 @@
       .menu-home a:hover {
         border-bottom: 2px solid #00ffe0a6;
       }
-        /* Estilo do container do banner */
-      .banner {
-        width: 100%; /* O banner ocupa toda a largura da página */
-        height: 400px; /* Defina a altura do banner conforme necessário */
-        display: flex; /* Usa Flexbox para centralizar o conteúdo dentro do banner */
-        justify-content: center; /* Centraliza horizontalmente */
-        align-items: center; /* Centraliza verticalmente */
-        overflow: hidden; /* Garante que qualquer parte da imagem que ultrapasse seja oculta */
-      }
-      /* Estilo da imagem dentro do banner */
-      .banner img {
-        max-width: 1200px;
-        width: 1200px;  /* A imagem vai cobrir toda a largura do banner */
-        height: 100%; /* A imagem vai cobrir toda a altura do banner */
-        object-fit: cover; /* Faz com que a imagem cubra a área sem distorcer */
-      }
 </style>
 
 </head>
@@ -98,7 +82,7 @@
             <a class="nav-link active" aria-current="page" href="#servicos">Serviços</a>               
             <a class="nav-link" href="#equipe" role="button" aria-expanded="false">Equipe</a>
             <a class="nav-link" href="#localizacao" role="button" aria-expanded="false">Localização</a>
-            <a class="nav-link" href="#" role="button" aria-expanded="false">Sobre</a>
+            <a class="nav-link" href="#sobre" role="button" aria-expanded="false">Sobre</a>
             <a class="nav-link" href="login.php">Login</a>
           </li>
         </ul>
@@ -108,10 +92,8 @@
 
 <div class="container-fluidcolor-line"></div>
 
-<div class="container">
-  <div class="banner">
+<div class="container-banner">
     <img src="assets/banner1.png" alt="Banner">
-  </div>
 </div>
 
 <div class="container-servicos" id="servicos">
@@ -251,12 +233,42 @@
 
 
 
+<div class="container-sobre" id="sobre">
+  <h3>Sobre nós</h3>
+  <div class="container-fluidcolor-line"></div>
+  <div class="sobre-principal">
+    <p>A <b style="color: #00ffe0a6">MGC Clinic</b> foi fundada com o propósito de oferecer um atendimento médico de excelência, pautado no compromisso com a saúde e bem-estar dos nossos pacientes. Ao longo dos anos, crescemos e nos consolidamos como uma clínica de referência na região, sempre investindo em inovação e em uma equipe de profissionais altamente qualificados. Desde a nossa inauguração, buscamos integrar tecnologia de ponta e um atendimento humanizado, com a missão de proporcionar cuidado médico integral em todas as fases da vida. Através de uma gestão eficiente e uma visão voltada para a qualidade, a <b style="color: #00ffe0a6">MGC Clinic</b> se tornou um espaço confiável e acolhedor, onde nossos pacientes encontram não apenas tratamentos especializados, mas também um atendimento dedicado e personalizado. Nossa trajetória é marcada pela busca constante por melhorias, pela construção de uma rede de confiança com nossos pacientes e pela promoção da saúde com ética, respeito e competência.</p>
+    <img src="assets/equipe-medicos.png.png" alt="">
+  </div>
+  <div class="cards-sobre">
+    <div class="card-sobre">
+      <img class="img-icon" src="assets/icon-compromisso.png" alt="">
+      <h4>Compromisso com a Saúde</h4>
+      <p>Priorizamos a prevenção, o diagnóstico precoce e o acompanhamento contínuo de nossos pacientes. Acreditamos que a saúde é um processo dinâmico, que exige atenção constante e cuidados em todas as fases da vida.</p>
+    </div>
+    <div class="card-sobre">
+      <img class="img-icon" src="assets/icon-visao.png" alt="">
+      <h4>Nossa Visão</h4>
+      <p>Ser reconhecida como uma clínica de referência em excelência médica e atendimento humanizado, proporcionando aos nossos pacientes um ambiente seguro, acolhedor e de confiança.</p>
+    </div>
+  </div>
+  <div class="cards-sobre">
+    <div class="card-sobre">
+      <img class="img-icon" src="assets/icon-missao.png" alt="">
+      <h4>Nossa Missão</h4>
+      <p>Oferecer cuidados médicos completos, com base em um atendimento técnico de alta qualidade e com um olhar atento às necessidades individuais de cada paciente. Trabalhamos para promover a saúde e qualidade de vida, com uma equipe comprometida em oferecer sempre o melhor.</p>
+    </div>
+    <div class="card-sobre">
+      <img class="img-icon" src="assets/icon-valores.png" alt="">
+      <h4>Valores</h4>
+      <p>Compromisso com o paciente: Cuidamos de cada paciente com empatia, respeito e atenção.
+      Excelência médica: Oferecemos tratamentos e diagnósticos com precisão, atualizados com as melhores práticas da medicina.
+      Inovação: Estamos sempre à frente, incorporando novas tecnologias e técnicas para garantir o melhor cuidado.
+      Atenção personalizada: Cada pessoa é única, por isso, oferecemos um atendimento que respeita as especificidades de cada paciente.</p>
+    </div>
+  </div>
 
-
-
-
-
-  <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
-  <script src="javascript.js"></script>
+<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+<script src="javascript.js"></script>
 </body>
 </html>

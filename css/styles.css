@@ -53,7 +53,6 @@ body {
     display: none;
     padding: 20px;
 }
-
 .active {
     display: block;
 }
@@ -75,30 +74,22 @@ body {
 .menu-home a:hover {
     border-bottom: 2px solid #00ffe0a6;
 }
-        /* Estilo do container do banner */
-.banner {
-    width: 100%; /* O banner ocupa toda a largura da página */
-    height: 400px; /* Defina a altura do banner conforme necessário */
-    display: flex; /* Usa Flexbox para centralizar o conteúdo dentro do banner */
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    overflow: hidden; /* Garante que qualquer parte da imagem que ultrapasse seja oculta */
+.container-banner {
+    display: flex;
+    background-color: red;
+    justify-content: center;
 }
-      /* Estilo da imagem dentro do banner */
-.banner img {
-    max-width: 1200px;
-    width: 1200px;  /* A imagem vai cobrir toda a largura do banner */
-    height: 100%; /* A imagem vai cobrir toda a altura do banner */
-    object-fit: cover; /* Faz com que a imagem cubra a área sem distorcer */
+.container-banner img {
+    width: 100%;
+    height: 600px;
 }
 .container-servicos {
     color: rgb(255, 255, 255);
-    background-color: transparend;
+    background-color: transparent;
     max-width: 1200px;
     margin: 0 auto;
     margin-top: 2rem;
 }
-
 .servicos-carousel {
     position: relative;
     width: 100%;
@@ -255,6 +246,18 @@ body {
     max-width: 800px;
     justify-content: center;
 }
+.expand-btn {
+    background: transparent;
+    border: none;
+    color: #00ffe0;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    text-align: center;
+}
+.expand-btn:hover {
+    text-decoration: underline;
+}
 .container-localizacao-geral {
     display: flex;
     flex-direction: column;
@@ -286,4 +289,61 @@ body {
     max-width: 400px;
     width: 100%;
     height: 190px;
+}
+.container-sobre {
+    background:linear-gradient(to right, #0c0c0c, rgb(29, 29, 29), rgb(29, 29, 29), #0c0c0c);
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+}
+.sobre-principal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sobre-principal img {
+    width: 25%;
+}
+.container-sobre .container-fluidcolor-line {
+    margin-bottom: 1rem;
+}
+.cards-sobre {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.4rem;
+}
+.card-sobre {
+    max-width: 50%;
+    width: 580px;
+    border: 2px solid rgb(54, 54, 54);
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.3rem;
+}
+.card-sobre:hover {
+    max-width: 50%;    
+    background:linear-gradient(to right, #0c0c0c, rgb(29, 29, 29), rgb(29, 29, 29), #0c0c0c);
+    width: 580px;
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.3rem;
+}
+.img-icon {
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 50%;
+}
+.card-sobre p {
+    margin-top: 1rem;
+    max-width: 500px;
+    width: 500px;
+    max-height: 100px;
+    height: 100px;
+    overflow: hidden;
 }
