@@ -355,7 +355,7 @@ footer {
     padding: 1rem;
 }
 .rodape {
-    color: white;
+    color: rgb(8, 230, 200);
     display: flex;
     max-width: 1200px;
     width: 1200px;
@@ -366,21 +366,4 @@ footer {
     border-radius: 10px;
     background:linear-gradient(to right, #0c0c0c, rgb(29, 29, 29), rgb(29, 29, 29), #0c0c0c);
     justify-content: space-between;
-}
-.into-rodape {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    margin-left: none;
-    justify-content: initial;
-}
-.rodape ul li {
-    list-style: none;
-    padding: 0;
-}
-.receber-novidades-rodape {
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
 }
