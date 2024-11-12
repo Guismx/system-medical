@@ -355,8 +355,7 @@ footer {
     padding: 1rem;
 }
 .rodape {
-    color: rgb(8, 230, 200);
-    display: flex;
+    color: rgb(255, 255, 255);
     max-width: 1200px;
     width: 1200px;
     max-height: 400px;
@@ -367,3 +366,53 @@ footer {
     background:linear-gradient(to right, #0c0c0c, rgb(29, 29, 29), rgb(29, 29, 29), #0c0c0c);
     justify-content: space-between;
 }
+.into-rodape {
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+}
+.info-page-rodape ul,
+.info-clinica-rodape ul,
+.info-atendimentos-rodape ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+.info-page-rodape a {
+    text-decoration: none;
+    color: #ffffff;
+}
+.receber-novidades-rodape {
+    align-items: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.receber-novidades-rodape {
+    display: flex; /* Organiza o input e o botão em uma linha */
+}
+
+.receber-novidades-rodape input {
+    background: linear-gradient(to right, #0c0c0c, rgb(29, 29, 29), rgb(29, 29, 29), #0c0c0c);
+    width: 300px;
+    height: 30px;
+    border: 1px solid black;
+    border-right: none; /* Remove a borda direita para unir com o botão */
+    border-radius: 10px 0 0 10px;
+    color: white;
+    outline: none;
+}
+
+.receber-novidades-rodape button {
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 30px;
+    color: #ffffff;
+    background: linear-gradient(to right, #0c0c0c, rgb(29, 29, 29), rgb(29, 29, 29), #0c0c0c);
+    border: 1px solid black;
+    border-left: none; /* Remove a borda esquerda para unir com o input */
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+    margin-left: 0;
+}
+

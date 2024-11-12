@@ -275,6 +275,7 @@
       <div class="into-rodape">
         <div class="info-page-rodape">
           <ul>
+            <li><b>NAVEGAÇÃO</b></li><br>
             <li><a href="">Inicio</a></li>
             <li><a href="">Serviços</a></li>
             <li><a href="">Equipe</a></li>
@@ -284,14 +285,14 @@
         </div>
         <div class="info-clinica-rodape">
           <ul>
-            <li><b>INFORMAÇÕES</b></li>
+            <li><b>INFORMAÇÕES</b></li><br>
             <li>Política de Privacidade</li>
             <li>Política de cookies</li>
           </ul>
         </div>
         <div class="info-atendimentos-rodape">
           <ul>
-              <li><b>ATENDIMENTOS</b></li>
+              <li><b>ATENDIMENTOS</b></li><br>
               <li>61 XXXX-XXXX</li>
               <li>61 XXXX-XXXX</li>
               <li>mgc@gmail.com</li>
@@ -302,7 +303,7 @@
         <h3>RECEBER NOVIDADES</h3>
           <form>
             <label for="email"><b>Digite seu e-mail</b></label>
-            <input type="email" name="email" id="email" />
+            <input type="email" name="email" id="email"/>
             <button>Enviar</button>
           </form>
       </div>
