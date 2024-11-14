@@ -23,6 +23,13 @@
 					'{$endereco_paciente}')";
 
 			$res = $conn->query($sql);
+			if ($res == true) {
+				print "<script>alert('Cadastrou com sucesso!')</script>";
+				print "<script>location.href='?page=listar-paciente'</script>";
+			} else {
+				print "<script>alert('Erro ao cadastrar !')</script>";
+				print "<script>location.href='?page=cadastrar-paciente'</script>";
+			};
 			break;	
 
 		case 'editar':

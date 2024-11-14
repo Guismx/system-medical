@@ -415,4 +415,165 @@ footer {
     cursor: pointer;
     margin-left: 0;
 }
+/* CSS  PÁGINA DE LOGIN */
 
+.container-login {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #0c0c0c, rgb(29, 29, 29), rgb(29, 29, 29), #0c0c0c);
+}
+.container-login form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 0.4em;
+    background-color: #171717;
+    border-radius: 20px;
+}
+#heading {
+    text-align: center;
+    margin: 2em;
+    color: rgb(0, 255, 200);
+    font-size: 1.2em;
+}
+.field {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: #171717;
+    box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+    max-width: 300px;
+    width: 300px;
+  }
+.input-field {
+    margin-left: 10px;
+    background: none;
+    border: none;
+    outline: none;
+    color: rgb(0, 255, 200);
+    max-width: 300px;
+    width: 250px;    
+}
+.container-login .field .input-icon {
+    fill: rgb(0, 255, 200);
+    margin-left: 1em;
+}
+.container-login .entrar {
+    max-width: 50%;
+    width: 50%;
+    padding: 0.5em;
+    padding-left: 1.1em;
+    padding-right: 1.1em;
+    border-radius: 5px;
+    margin-right: 0.5em;
+    border: none;
+    outline: none;
+    transition: .4s ease-in-out;
+    background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+    color: rgb(0, 0, 0);
+}
+      
+.container-login .entrar:hover {
+    background-image: linear-gradient(163deg, #00642f 0%, #13034b 100%);
+    color: rgb(0, 255, 200);
+} 
+.container-login .btn-login {
+    display: flex;
+    justify-content: space-between;
+  }
+.container-login .cadastrar {
+    max-width: 50%;
+    width: 50%;
+    padding: 0.5em;
+    padding-left: 2.3em;
+    padding-right: 2.3em;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    transition: .4s ease-in-out;
+    background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+    color: rgb(0, 0, 0);
+  }
+  
+.container-login .cadastrar:hover {
+    background-image: linear-gradient(163deg, #00642f 0%, #13034b 100%);
+    color: rgb(0, 255, 200);
+  }
+.container-login .esqueceu-senha {
+    padding: 0.5em;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    transition: .4s ease-in-out;
+    background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+    color: rgb(0, 0, 0);
+  }
+  
+.container-login .esqueceu-senha:hover {
+    background-image: linear-gradient(163deg, #a00000fa 0%, #d10050 100%);
+    color: rgb(255, 255, 255);
+  }
+.container-login .card {
+    background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+    border-radius: 22px;
+    transition: all .3s;
+  }
+  
+.container-login .card2 {
+    border-radius: 0;
+    transition: all .2s;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 2em;
+    padding-right: 2em;
+    background-color: #171717;
+    border-radius: 20px;
+  }
+  
+.container-login .card2:hover {
+    transform: scale(0.98);
+    border-radius: 20px;
+  }
+  
+.container-login .card:hover {
+    box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
+}
+.error-messages {
+    color: rgb(0, 255, 200);
+    font-size: 14px;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+.error-messages p {
+    margin: 5px;
+}
+/*TELA DE CADASTRO USUARIO NORMAL */
+
+.container-login .field label {
+    color: #00ffe0;
+    height: 30px;
+}
+.container-login .sexo {
+    display: flex;
+    color:#00ffe0; 
+    margin-left: 0.8rem;
+    justify-content: center;
+    margin: 1px;
+}
+.field-sexo {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    color: #00ffe0;
+}

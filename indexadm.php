@@ -12,22 +12,21 @@
         color: white;
       }
       .container-fluidcolor-line {
-      background: linear-gradient(to right, #d6daff, #00ffe0a6, #00ffe0a6, #d6daff);
-      height: 3px;
-      width: 100%;
+        background: linear-gradient(to right, #d6daff, #00ffe0a6, #00ffe0a6, #d6daff);
+        height: 3px;
+        width: 100%;
       }
       .container-nav {
-      display: flex;
-      justify-content: center; 
-      align-items: center; 
-      max-width: 1200px;
-      width: 100%;
-      margin: 0 auto; 
-      padding: 0; 
-      gap: 2rem; /* Espaçamento entre os itens */
-      padding-right: 5px; /* Padding específico à direita */
-}
-
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto; 
+        padding: 0; 
+        gap: 2rem; /* Espaçamento entre os itens */
+        padding-right: 5px; /* Padding específico à direita */
+      }
       .navbar-nav .nav-link.active {
         color: #00ffe0a6;
       }
@@ -43,7 +42,7 @@
       .dropdown-item {
         color: #00ffe0a6;
       }
-      .dropdown-menu.show{
+      .dropdown-menu.show {
         background: #18211e;
       }
       .form-control {
@@ -60,33 +59,31 @@
         color: rgb(33 37 41);
       }
       .section {
-      display: none;
-      padding: 20px;
+        display: none;
+        padding: 20px;
       }
 
-    .active {
-      display: block;
-    }
-    .menu-home {
-      display: flex;
-      max-width: 1200px;
-      flex-direction: center;
-      margin: 0 auto;
-
-    }
-    .menu-home a {
-      display: flex;
-      width: 400px;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
-      height: 30px;
-    }
-    .menu-home a:hover {
-      border-bottom: 2px solid #00ffe0a6;
-    }
+      .active {
+        display: block;
+      }
+      .menu-home {
+        display: flex;
+        max-width: 1200px;
+        flex-direction: center;
+        margin: 0 auto;
+      }
+      .menu-home a {
+        display: flex;
+        width: 400px;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        height: 30px;
+      }
+      .menu-home a:hover {
+        border-bottom: 2px solid #00ffe0a6;
+      }
     </style>
-
 </head>
 <body>
 <nav class="navbar navbar-expand-lg bg-dark">
@@ -97,9 +94,8 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="indexadm.php">Inicio</a>
+            <a class="nav-link <?php echo (!isset($_REQUEST['page']) || $_REQUEST['page'] == 'home') ? 'active' : ''; ?>" href="indexadm.php?page=home">Inicio</a>
           </li>
-          
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Médicos
@@ -119,8 +115,7 @@
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-            aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Consultas
             </a>
             <ul class="dropdown-menu">
@@ -141,8 +136,9 @@
     <div class="row mt-3">
         <div class="col">
             <?php 
-                include('config.php'); //Arquivo de conexão com o banco
+                include('config.php'); // Arquivo de conexão com o banco
 
+                // Switch para carregar a página correspondente de acordo com o parâmetro 'page'
                 switch (@$_REQUEST['page']) {
                     case 'cadastrar-medico':
                         include('cadastrar-medico.php');
@@ -170,6 +166,7 @@
                         include('salvar-paciente.php');    
                         break;  
                             
+
                     case 'cadastrar-consulta':
                         include('cadastrar-consulta.php');
                         break;
@@ -184,7 +181,7 @@
                         break;  
                     
                     default:
-                        include('home.php');
+                        include('home.php'); // Página inicial
                 }
             ?>
         </div>
@@ -248,6 +245,7 @@ if (!isset($_REQUEST['page']) || $_REQUEST['page'] == 'home') {
 <?php
 }
 ?>
-  <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+
+<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

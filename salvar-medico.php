@@ -1,64 +1,70 @@
 <?php
-	switch ($_REQUEST['acao']) {
-		case 'cadastrar':
-			$nome = $_POST['nome_medico'];
-			$crm = $_POST['crm_medico'];
-			$especialidade = $_POST['especialidade_medico'];
+switch ($_REQUEST['acao']) {
+    case 'cadastrar':
+        // Coleta os dados do formulário
+        $id_usuario = $_POST['id_usuario'];  // ID do usuário selecionado
+        $crm = $_POST['crm_medico'];
+        $especialidade = $_POST['especialidade_medico'];
 
-			$sql = "INSERT INTO  medico(nome_medico,
-										crm_medico, 
-										especialidade_medico)
-				VALUES
-					('{$nome}', 
-						'{$crm}', 
-					'{$especialidade}')";
+        // Realiza a inserção na tabela "medico"
+        $sql = "INSERT INTO medico (crm_medico, especialidade_medico, usuario_id_usuario)
+                VALUES ('{$crm}', '{$especialidade}', {$id_usuario})";
 
-			$res = $conn->query($sql);
+        $res = $conn->query($sql);
 
-			if ($res == true) {
-				print "<script>alert('Cadastrou com sucesso!')</script>";
-				print "<script>location.href='?page=listar-medico'</script>";
-			} else {
-				print "<script>alert('Deu errado !')</script>";
-				print "<script>location.href='?page=listar-medico'</script>";
-			};
-			break;
+        // Verifica se a inserção foi bem-sucedida
+        if ($res == true) {
+            // Após cadastrar o médico, atualize o nível de acesso do usuário para "medico"
+            $sql_update_nivel = "UPDATE usuario SET nivel_acesso = 'medico' WHERE id_usuario = {$id_usuario}";
+            $conn->query($sql_update_nivel);
 
-		case 'editar':
-			$nome = $_POST['nome_medico'];
-			$crm = $_POST['crm_medico'];
-			$especialidade = $_POST['especialidade_medico'];
+            print "<script>alert('Médico cadastrado com sucesso!')</script>";
+            print "<script>location.href='?page=listar-medico'</script>";
+        } else {
+            print "<script>alert('Erro ao cadastrar médico!')</script>";
+            print "<script>location.href='?page=listar-medico'</script>";
+        }
+        break;
 
-			$sql = "UPDATE  medico SET nome_medico = '{$nome}', crm_medico = '{$crm}', especialidade_medico = '{$especialidade}'
-					WHERE
-						id_medico = ".$_POST["id_medico"];
+    case 'editar':
+        // Coleta os dados do formulário para edição
+        $id_medico = $_POST['id_medico'];
+        $crm = $_POST['crm_medico'];
+        $especialidade = $_POST['especialidade_medico'];
 
-			$res = $conn->query($sql);
+        // Atualiza o médico na tabela "medico"
+        $sql = "UPDATE medico 
+                SET crm_medico = '{$crm}', especialidade_medico = '{$especialidade}'
+                WHERE id_medico = {$id_medico}";
 
-			if ($res == true) {
-				print "<script>alert('Editou com sucesso!')</script>";
-				print "<script>location.href='?page=listar-medico'</script>";
-			} else {
-				print "<script>alert('Deu errado !')</script>";
-				print "<script>location.href='?page=listar-medico'</script>";
-			};
-			break;	
+        $res = $conn->query($sql);
 
-		case 'excluir':
-		    $id_medico = $_POST['id_medico'];
+        // Verifica se a atualização foi bem-sucedida
+        if ($res == true) {
+            print "<script>alert('Médico editado com sucesso!')</script>";
+            print "<script>location.href='?page=listar-medico'</script>";
+        } else {
+            print "<script>alert('Erro ao editar médico!')</script>";
+            print "<script>location.href='?page=listar-medico'</script>";
+        }
+        break;
 
-		    $sql = "DELETE FROM medico WHERE id_medico = ".$_GET['id_medico'];
+    case 'excluir':
+        $id_medico = $_POST['id_medico'];
 
-		    $res = $conn->query($sql);
+        // Exclui o médico da tabela "medico"
+        $sql = "DELETE FROM medico WHERE id_medico = {$id_medico}";
 
-		    if ($res == true) {
-		        print "<script>alert('Médico deletado com sucesso!')</script>";
-		        print "<script>location.href='?page=listar-medico'</script>";
-		    } else {
-		        print "<script>alert('Erro ao deletar o médico!')</script>";
-		        print "<script>location.href='?page=listar-medico'</script>";
-		    };
-		    break;
+        $res = $conn->query($sql);
 
-	}
+        // Verifica se a exclusão foi bem-sucedida
+        if ($res == true) {
+            print "<script>alert('Médico excluído com sucesso!')</script>";
+            print "<script>location.href='?page=listar-medico'</script>";
+        } else {
+            print "<script>alert('Erro ao excluir o médico!')</script>";
+            print "<script>location.href='?page=listar-medico'</script>";
+        }
+        break;
+}
 ?>

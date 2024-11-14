@@ -35,7 +35,7 @@
 
 <h1>Listar Paciente<h1>
 <?php
-	$sql = "SELECT * FROM `paciente`";
+	$sql = "SELECT * FROM `usuario`";
 
 	$res = $conn->query($sql);
 
@@ -52,22 +52,24 @@
 		print "<th>Data de Nascimento</th>";
 		print "<th>Sexo</th>";
 		print "<th>Endereço</th>";
+		print "<th>Nível de Acesso</th>";
 		print "<th>Ações</th>";
 		print "</tr>";
 
 		while ($row = $res-> fetch_object()) {
 			print "<tr>";
-			print "<td>".$row->id_paciente."</td>";
-			print "<td>".$row->nome_paciente."</td>";
-			print "<td>".$row->cpf_paciente."</td>";
-			print "<td>".$row->email_paciente."</td>";
-			print "<td>".$row->data_nasc_paciente."</td>";
-			print "<td>".$row->sexo_paciente."</td>";
-			print "<td>".$row->endereco_paciente."</td>";
+			print "<td>".$row->id_usuario."</td>";
+			print "<td>".$row->nome_usuario."</td>";
+			print "<td>".$row->cpf_usuario."</td>";
+			print "<td>".$row->email_usuario."</td>";
+			print "<td>".$row->data_nasc_usuario."</td>";
+			print "<td>".$row->sexo_usuario."</td>";
+			print "<td>".$row->endereco_usuario."</td>";
+			print "<td>".$row->nivel_acesso."</td>";
 			print "<td>
-						<button class='btn btn-success' onclick=\"location.href='?page=editar-paciente&id_paciente=".$row->id_paciente."';\">Editar</button>
+						<button class='btn btn-success' onclick=\"location.href='?page=editar-paciente&id_paciente=".$row->id_usuario."';\">Editar</button>
 
-						<button class='btn btn-danger' onclick=\" if(confirm('Tem certeza que deseja excluir?')){location.href='?page=salvar-paciente&acao=excluir&id_paciente=".$row->id_paciente."';}else{false;}\">Excluir</button>
+						<button class='btn btn-danger' onclick=\" if(confirm('Tem certeza que deseja excluir?')){location.href='?page=salvar-paciente&acao=excluir&id_paciente=".$row->id_usuario."';}else{false;}\">Excluir</button>
 				</td>";
 			print "</tr>";
 		}
