@@ -1,43 +1,45 @@
 <?php
-    include('config.php'); // Verifique se o arquivo config.php está configurado corretamente
+include('config.php'); // Verifique se o arquivo config.php está configurado corretamente
 
-    session_start(); // Inicia a sessão, se não estiver iniciada
+session_start(); // Inicia a sessão, se não estiver iniciada
 
-    // Verifica se o formulário foi enviado
-    if (isset($_POST['email']) && strlen($_POST['email']) > 0) {
-        // Escapa o e-mail para prevenir SQL Injection
-        $email = $conn->escape_string($_POST['email']);
-        $senha = md5($_POST['senha']); // Aplica md5() apenas uma vez na senha
+// Verifica se o formulário foi enviado
+if (isset($_POST['email']) && strlen($_POST['email']) > 0) {
+    // Escapa o e-mail para prevenir SQL Injection
+    $email = $conn->escape_string($_POST['email']);
+    $senha = md5($_POST['senha']); // Aplica md5() apenas uma vez na senha
 
-        // Verifica se o e-mail já está registrado no banco de dados
-        $sql_check_email = "SELECT id_usuario FROM usuario WHERE email_usuario = '$email'";
-        $res_check_email = $conn->query($sql_check_email) or die($conn->error); // Executa a consulta para verificar o e-mail
-        $total_email = $res_check_email->num_rows; // Número de registros com o e-mail informado
+    // Verifica se o e-mail já está registrado no banco de dados
+    $sql_check_email = "SELECT id_usuario FROM usuario WHERE email_usuario = '$email'";
+    $res_check_email = $conn->query($sql_check_email) or die($conn->error); // Executa a consulta para verificar o e-mail
+    $total_email = $res_check_email->num_rows; // Número de registros com o e-mail informado
 
-        if ($total_email > 0) {
-            // Se o e-mail já existe, adiciona um erro
-            $erro[] = "Este e-mail já está cadastrado. Tente outro.";
+    if ($total_email > 0) {
+        // Se o e-mail já existe, adiciona um erro
+        $erro[] = "Este e-mail já está cadastrado.";
+    } else {
+        // Caso o e-mail não exista, tenta inserir o novo usuário
+        // Dados de cadastro
+        $nome_usuario = $conn->escape_string($_POST['nome_usuario']);
+        $cpf_usuario = $conn->escape_string($_POST['cpf-usuario']);
+        $data_nasc_usuario = $conn->escape_string($_POST['data-nasc-usuario']);
+        $sexo_usuario = $conn->escape_string($_POST['sexo_usuario']);
+        $endereco_usuario = $conn->escape_string($_POST['endereco-usuario']); // Verifique o campo de endereço
+        $nivel_acesso = 'paciente'; // Definindo o valor fixo de "paciente" para o campo nivel_acesso
+
+        // Insere o novo usuário no banco de dados
+        $sql_insert = "INSERT INTO usuario (nome_usuario, email_usuario, senha, cpf_usuario, data_nasc_usuario, sexo_usuario, endereco_usuario, nivel_acesso) 
+                       VALUES ('$nome_usuario', '$email', '$senha', '$cpf_usuario', '$data_nasc_usuario', '$sexo_usuario', '$endereco_usuario', '$nivel_acesso')";
+        if ($conn->query($sql_insert)) {
+            // Se a inserção for bem-sucedida, redireciona
+            echo "<script>alert('Cadastro realizado com sucesso'); location.href='login.php';</script>";
         } else {
-            // Caso o e-mail não exista, tenta inserir o novo usuário
-            // Dados de cadastro
-            $nome_usuario = $conn->escape_string($_POST['nome_usuario']);
-            $cpf_usuario = $conn->escape_string($_POST['cpf-usuario']);
-            $data_nasc_usuario = $conn->escape_string($_POST['data-nasc-usuario']);
-            $sexo_paciente = $conn->escape_string($_POST['sexo_paciente']);
-            $endereco_usuario = $conn->escape_string($_POST['data-nasc-usuario']); // Verifique o campo de endereço
-
-            // Insere o novo usuário no banco de dados
-            $sql_insert = "INSERT INTO usuario (nome_usuario, email_usuario, senha, cpf_usuario, data_nasc_usuario, sexo_paciente, endereco_usuario) 
-                           VALUES ('$nome_usuario', '$email', '$senha', '$cpf_usuario', '$data_nasc_usuario', '$sexo_paciente', '$endereco_usuario')";
-            if ($conn->query($sql_insert)) {
-                // Se a inserção for bem-sucedida, redireciona
-                echo "<script>alert('Cadastro realizado com sucesso'); location.href='login.php';</script>";
-            } else {
-                $erro[] = "Erro ao cadastrar usuário. Tente novamente.";
-            }
+            $erro[] = "Erro ao cadastrar usuário. Tente novamente.";
         }
     }
+}
 ?>
+
 <html>
 <head>
     <title>Cadastro</title>
@@ -71,17 +73,17 @@
 					<p class="sexo">Sexo</p>
 					<div class="field-sexo">
 						<div class="opcao-sexo">
-							<input type="radio" id="masculino" name="sexo_paciente" value="masculino" class="form-check-input" required>
+							<input type="radio" id="masculino" name="sexo_usuario" value="masculino" class="form-check-input" required>
 							<label for="masculino" class="form-check-label">Masculino</label>
 						</div>
 						<div class="opcao-sexo">
-							<input type="radio" id="feminino" name="sexo_paciente" value="feminino" class="form-check-input" required>
+							<input type="radio" id="feminino" name="sexo_usuario" value="feminino" class="form-check-input" required>
 							<label for="feminino" class="form-check-label">Feminino</label>
 						</div>
 					</div>
                     <div class="btn-login">
                         <input class="entrar" value="Cadastrar" type="submit">
-                        <input class="cadastrar" value="Voltar" type="button" onclick="window.location.href='login.php';">
+                        <input class="cadastrar" value="Retornar" type="button" onclick="window.location.href='login.php';">
                     </div>
                 </form>
 

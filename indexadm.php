@@ -1,3 +1,7 @@
+<?php
+include('protect.php');
+protect();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +9,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MGC Clinic</title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-
     <style>
       body {
         background:linear-gradient(to right, #0c0c0c, rgb(29, 29, 29), rgb(29, 29, 29), #0c0c0c);

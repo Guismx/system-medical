@@ -2,7 +2,7 @@
 
 <?php
 // Verifica se o id_usuario foi passado na URL
-if (isset($_GET['id_usuario'])) {
+    if (isset($_GET['id_usuario'])) {
     // Recupera o id_usuario da URL
     $id_usuario = $_GET['id_usuario'];
 

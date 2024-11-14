@@ -68,7 +68,7 @@
                         <input class="cadastrar" value="Cadastrar" type="button" onclick="window.location.href='cadastro-usuario.php';">
 
                     </div>
-                    <input class="esqueceu-senha" value="Esqueceu sua senha?" type="submit">
+                    <input class="esqueceu-senha" value="Esqueceu sua senha?" type="button" onclick="window.location.href='esqueceu-senha.php';">
                 </form>
 
                 <!-- Aqui estão as mensagens de erro, agora abaixo do botão "Esqueceu sua senha?" -->

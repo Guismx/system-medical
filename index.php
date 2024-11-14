@@ -83,7 +83,7 @@
             <a class="nav-link" href="#equipe" role="button" aria-expanded="false">Equipe</a>
             <a class="nav-link" href="#localizacao" role="button" aria-expanded="false">Localização</a>
             <a class="nav-link" href="#sobre" role="button" aria-expanded="false">Sobre</a>
-            <a class="nav-link" href="login.php">Login</a>
+            <a class="nav-link" href="login.php">Entrar / Cadastrar</a>
           </li>
         </ul>
       </div>
