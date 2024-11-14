@@ -8,8 +8,8 @@
         $_SESSION['email'] = $conn->escape_string($_POST['email']);
         $_SESSION['senha'] = md5($_POST['senha']); // Aplica md5() apenas uma vez na senha
 
-        // Consulta para verificar o e-mail e a senha no banco
-        $sql = "SELECT senha, id_usuario FROM usuario WHERE email_usuario = '" . $_SESSION['email'] . "'";
+        // Consulta para verificar o e-mail, a senha e o nível de acesso no banco
+        $sql = "SELECT senha, id_usuario, nivel_acesso FROM usuario WHERE email_usuario = '" . $_SESSION['email'] . "'";
         $res = $conn->query($sql) or die($conn->error); // Certifique-se de usar a variável de conexão correta
         $dado = $res->fetch_assoc();
         $total = $res->num_rows;
@@ -20,14 +20,17 @@
         } else {
             if ($dado['senha'] == $_SESSION['senha']) {
                 $_SESSION['usuario'] = $dado['id_usuario'];
+                $_SESSION['nivel_acesso'] = $dado['nivel_acesso'];
+                
+                // Redireciona o usuário com base no nível de acesso
+                if ($dado['nivel_acesso'] == 'paciente') {
+                    echo "<script>alert('Login efetuado com sucesso'); location.href='index.php';</script>";
+                } else {
+                    echo "<script>alert('Login efetuado com sucesso'); location.href='indexadm.php';</script>";
+                }
             } else {
                 $erro[] = "Senha incorreta.";
             }
-        }
-
-        // Se não houver erros, redireciona o usuário para a página de listagem de pacientes
-        if (empty($erro)) {
-            echo "<script>alert('Login efetuado com sucesso'); location.href='indexadm.php';</script>";
         }
     }
 
@@ -68,7 +71,8 @@
                         <input class="cadastrar" value="Cadastrar" type="button" onclick="window.location.href='cadastro-usuario.php';">
 
                     </div>
-                    <input class="esqueceu-senha" value="Esqueceu sua senha?" type="button" onclick="window.location.href='esqueceu-senha.php';">
+                    <input class="btn-voltar" value="Voltar" type="button" onclick="window.location.href='index.php';">
+                    <a href="esqueceu-senha.php">Esqueceu sua senha?</a>
                 </form>
 
                 <!-- Aqui estão as mensagens de erro, agora abaixo do botão "Esqueceu sua senha?" -->
@@ -87,4 +91,3 @@
     </div>
 </body>
 </html>
-

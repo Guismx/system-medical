@@ -1,5 +1,4 @@
 <h1>Cadastrar Médico</h1>
-
 <?php
 // Verifica se o id_usuario foi passado na URL
     if (isset($_GET['id_usuario'])) {

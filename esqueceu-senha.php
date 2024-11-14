@@ -50,7 +50,7 @@ if (isset($_POST['ok'])) {
                     </div>
                     <div class="btn-login">
                         <input class="entrar" value="Enviar E-mail" type="submit" name="ok">
-                        <input class="cadastrar" value="Retornar" type="button" onclick="window.location.href='login.php';">
+                        <input class="cadastrar" value="Voltar" type="button" onclick="window.location.href='login.php';">
                     </div>
                 </form>
 

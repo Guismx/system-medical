@@ -83,7 +83,7 @@ if (isset($_POST['email']) && strlen($_POST['email']) > 0) {
 					</div>
                     <div class="btn-login">
                         <input class="entrar" value="Cadastrar" type="submit">
-                        <input class="cadastrar" value="Retornar" type="button" onclick="window.location.href='login.php';">
+                        <input class="cadastrar" value="Voltar" type="button" onclick="window.location.href='login.php';">
                     </div>
                 </form>
 

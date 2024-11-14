@@ -1,5 +1,4 @@
 <h1>Cadastrar Consulta</h1>
-
 <style>
 	#id_medico {
 		background: rgb(235, 255, 255);

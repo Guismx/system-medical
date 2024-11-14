@@ -424,6 +424,7 @@ footer {
     align-items: center;
     justify-content: center;
     background: linear-gradient(to right, #0c0c0c, rgb(29, 29, 29), rgb(29, 29, 29), #0c0c0c);
+    
 }
 .container-login form {
     display: flex;
@@ -506,7 +507,7 @@ footer {
     background-image: linear-gradient(163deg, #00642f 0%, #13034b 100%);
     color: rgb(0, 255, 200);
   }
-.container-login .esqueceu-senha {
+.container-login .btn-voltar {
     padding: 0.5em;
     border-radius: 5px;
     border: none;
@@ -516,9 +517,9 @@ footer {
     color: rgb(0, 0, 0);
   }
   
-.container-login .esqueceu-senha:hover {
-    background-image: linear-gradient(163deg, #a00000fa 0%, #d10050 100%);
-    color: rgb(255, 255, 255);
+.container-login .btn-voltar:hover {
+    background-image: linear-gradient(163deg, #00642f 0%, #13034b 100%);
+    color: rgb(0, 255, 200);
   }
 .container-login .card {
     background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
@@ -555,6 +556,17 @@ footer {
 .error-messages p {
     margin: 5px;
 }
+.card2 a {
+    text-decoration: none;
+    display: flex;
+    color: #00ffe0;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.card2 a:hover {
+    color: #3700ff;
+}
 /*TELA DE CADASTRO USUARIO NORMAL */
 
 .container-login .field label {
@@ -577,3 +589,4 @@ footer {
     outline: none;
     color: #00ffe0;
 }
+
