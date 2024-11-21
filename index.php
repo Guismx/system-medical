@@ -138,20 +138,19 @@ if (isset($_SESSION['usuario'])) {
       </div>
    </div>
 </nav>
-
-
-
 <div class="container-fluidcolor-line"></div>
-
 <div class="container-banner">
     <img src="assets/banner1.png" alt="Banner">
 </div>
 
 <div class="container-servicos" id="servicos">
-  <h3>Conheça Nossos Serviços</h3>
-  <div class="container-fluidcolor-line"></div>
-  <div class="servicos-carousel">
-    <!-- Primeiro conjunto de 4 Cards -->
+  <div class="into-servicos">
+      <div>
+        <h3>Conheça Nossos Serviços</h3>
+        <div class="container-fluidcolor-line"></div> 
+      </div>
+      <div class="servicos-carousel">
+     <!--COMENTÁRIO Primeiro conjunto de 4 Cards -->
     <div class="servicos-index pagina">
       <div class="card-index">
         <img src="./assets/consulta-geral.png" alt="">
@@ -179,7 +178,7 @@ if (isset($_SESSION['usuario'])) {
       </div>
     </div>
 
-    <!-- Segundo conjunto de 4 Cards -->
+    <!--COMENTÁRIO Segundo conjunto de 4 Cards --> 
     <div class="servicos-index pagina">
       <div class="card-index">
         <img src="./assets/consulta-odontologica.png" alt="">
@@ -206,53 +205,59 @@ if (isset($_SESSION['usuario'])) {
         <a href="#" class="ver-mais">Ver mais</a>
       </div>
     </div>
-  </div>
 
-  <!-- Navegação do Carrossel -->
-  <div class="carousel-controls">
-    <button class="prev">←</button>
-    <button class="next">→</button>
+  </div>
+    <!--#COMENTÁRIO Navegação do Carrossel -->
+    <div class="carousel-controls">
+      <button class="prev">←</button>
+      <button class="next">→</button>
+    </div>
   </div>
 </div>
 
+
 <div class="container-equipe" id="equipe">
-  <h3>Nossa Equipe</h3>
-  <div class="container-fluidcolor-line"></div> 
-  <div class="banner-equipe">
-    <div class="dado-equipe">
-      <img src="./assets/medico-1.png" alt="">
-      <h6>Dra. Anna Luiza</h6>
-      <p>Cardiologista</p>
-      <p><b>CRM:</b> XXX.XXX.XXX</p>
+  <div class="into-equipe">
+    <div>
+      <h3>Nossa Equipe</h3>
+      <div class="container-fluidcolor-line"></div> 
     </div>
-    
-    <div class="infor-equipe">
-      <p>
-        Dra. Anna é cardiologista clínica e intervencionista, formada pela Universidade de São Paulo (USP) e com especialização em cardiologia intervencionista pelo Instituto Dante Pazzanese de Cardiologia. Com vasta experiência em instituições renomadas como o Hospital do Coração (HCor) e o Hospital Albert Einstein, Dra. Anna é especializada em procedimentos como cateterismo cardíaco e angioplastia, além de realizar atendimentos clínicos para pacientes com doenças cardiovasculares. Ao longo de sua carreira, ela também atuou na prevenção e educação em saúde cardíaca, completando capacitações em arritmias e suporte avançado de vida em cardiologia.</p>
+    <div class="banner-equipe">
+      <div class="dado-equipe">
+        <img src="./assets/medico-1.png" alt="">
+        <h6>Dra. Anna Luiza</h6>
+        <p>Cardiologista</p>
+        <p><b>CRM:</b> XXX.XXX.XXX</p>
+      </div>
+      
+      <div class="infor-equipe">
+        <p>
+          Dra. Anna é cardiologista clínica e intervencionista, formada pela Universidade de São Paulo (USP) e com especialização em cardiologia intervencionista pelo Instituto Dante Pazzanese de Cardiologia. Com vasta experiência em instituições renomadas como o Hospital do Coração (HCor) e o Hospital Albert Einstein, Dra. Anna é especializada em procedimentos como cateterismo cardíaco e angioplastia, além de realizar atendimentos clínicos para pacientes com doenças cardiovasculares. Ao longo de sua carreira, ela também atuou na prevenção e educação em saúde cardíaca, completando capacitações em arritmias e suporte avançado de vida em cardiologia.</p>
+      </div>
     </div>
-  </div>
 
-  <div class="banner-equipe2">
-  <div class="infor-equipe2">
-      <p>Dra. Anna é cardiologista clínica e intervencionista, formada pela Universidade de São Paulo (USP) e com especialização em cardiologia intervencionista pelo Instituto Dante Pazzanese de Cardiologia. Com vasta experiência em instituições renomadas como o Hospital do Coração (HCor) e o Hospital Albert Einstein, Dra. Anna é especializada em procedimentos como cateterismo cardíaco e angioplastia, além de realizar atendimentos clínicos para pacientes com doenças cardiovasculares. Ao longo de sua carreira, ela também atuou na prevenção e educação em saúde cardíaca, completando capacitações em arritmias e suporte avançado de vida em cardiologia.</p>
+    <div class="banner-equipe2">
+    <div class="infor-equipe2">
+        <p>Dra. Anna é cardiologista clínica e intervencionista, formada pela Universidade de São Paulo (USP) e com especialização em cardiologia intervencionista pelo Instituto Dante Pazzanese de Cardiologia. Com vasta experiência em instituições renomadas como o Hospital do Coração (HCor) e o Hospital Albert Einstein, Dra. Anna é especializada em procedimentos como cateterismo cardíaco e angioplastia, além de realizar atendimentos clínicos para pacientes com doenças cardiovasculares. Ao longo de sua carreira, ela também atuou na prevenção e educação em saúde cardíaca, completando capacitações em arritmias e suporte avançado de vida em cardiologia.</p>
+      </div>
+      <div class="dado-equipe2">
+        <img src="./assets/medico-1.png" alt="">
+        <h6>Dra. Anna Luiza</h6>
+        <p>Cardiologista</p>
+        <p><b>CRM: </b>XXX.XXX.XXX</p>
+      </div>
     </div>
-    <div class="dado-equipe2">
-      <img src="./assets/medico-1.png" alt="">
-      <h6>Dra. Anna Luiza</h6>
-      <p>Cardiologista</p>
-      <p><b>CRM: </b>XXX.XXX.XXX</p>
-    </div>
-  </div>
 
-  <div class="banner-equipe">
-    <div class="dado-equipe">
-      <img src="./assets/medico-1.png" alt="">
-      <h6>Dra. Anna Luiza</h6>
-      <p>Cardiologista</p>
-      <p><b>CRM: </b>XXX.XXX.XXX</p>
-    </div>
-    <div class="infor-equipe">
-      <p>Dra. Anna é cardiologista clínica e intervencionista, formada pela Universidade de São Paulo (USP) e com especialização em cardiologia intervencionista pelo Instituto Dante Pazzanese de Cardiologia. Com vasta experiência em instituições renomadas como o Hospital do Coração (HCor) e o Hospital Albert Einstein, Dra. Anna é especializada em procedimentos como cateterismo cardíaco e angioplastia, além de realizar atendimentos clínicos para pacientes com doenças cardiovasculares. Ao longo de sua carreira, ela também atuou na prevenção e educação em saúde cardíaca, completando capacitações em arritmias e suporte avançado de vida em cardiologia.</p>
+    <div class="banner-equipe">
+      <div class="dado-equipe">
+        <img src="./assets/medico-1.png" alt="">
+        <h6>Dra. Anna Luiza</h6>
+        <p>Cardiologista</p>
+        <p><b>CRM: </b>XXX.XXX.XXX</p>
+      </div>
+      <div class="infor-equipe">
+        <p>Dra. Anna é cardiologista clínica e intervencionista, formada pela Universidade de São Paulo (USP) e com especialização em cardiologia intervencionista pelo Instituto Dante Pazzanese de Cardiologia. Com vasta experiência em instituições renomadas como o Hospital do Coração (HCor) e o Hospital Albert Einstein, Dra. Anna é especializada em procedimentos como cateterismo cardíaco e angioplastia, além de realizar atendimentos clínicos para pacientes com doenças cardiovasculares. Ao longo de sua carreira, ela também atuou na prevenção e educação em saúde cardíaca, completando capacitações em arritmias e suporte avançado de vida em cardiologia.</p>
+      </div>
     </div>
   </div>
 </div>

@@ -82,12 +82,27 @@ body {
     width: 100%;
     height: 600px;
 }
+
+
+/* CARROUSEL DE SERVIÇOS */
 .container-servicos {
     color: rgb(255, 255, 255);
     background-color: transparent;
     max-width: 1200px;
     margin: 0 auto;
     margin-top: 2rem;
+}
+.into-servicos {
+    margin: 0 auto;
+    max-width: 1200px;
+    flex-direction: column;
+    display: flex;
+    color: white;
+    gap: 2rem;
+    background: linear-gradient(to right, #0c0c0c, rgb(29, 29, 29), rgb(29, 29, 29), #0c0c0c);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
 }
 .servicos-carousel {
     position: relative;
@@ -171,11 +186,36 @@ body {
 .carousel-controls button:hover {
     color: #00ffe0a6;
 }
-.container-equipe {
+
+/* Adicionando animação para as transições de slide */
+.pagina.previous {
+    transform: translateX(-100%); /* Página anterior deslizando para a esquerda */
+}
+
+.pagina.next {
+    transform: translateX(100%); /* Página seguinte deslizando para a direita */
+}
+
+.pagina.show {
+    transform: translateX(0); /* Página atual no centro, sem deslizamento */
+}
+
+
+
+/* CONTAINER EQUIPE */
+
+
+.into-equipe {
     margin: 0 auto;
-    padding: 1rem;
     max-width: 1200px;
+    flex-direction: column;
+    display: flex;
     color: white;
+    gap: 2rem;
+    background: linear-gradient(to right, #0c0c0c, rgb(29, 29, 29), rgb(29, 29, 29), #0c0c0c);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
 }
 .banner-equipe {
     background: linear-gradient(to right, #0c0c0c, rgb(29, 29, 29), rgb(29, 29, 29), #0c0c0c);
@@ -257,6 +297,10 @@ body {
 .expand-btn:hover {
     text-decoration: underline;
 }
+
+
+
+/* CONTAINER LOCALIZAÇÃO */
 
 .container-localizacao {
     margin: 0 auto;
@@ -589,4 +633,3 @@ footer {
     outline: none;
     color: #00ffe0;
 }
-
