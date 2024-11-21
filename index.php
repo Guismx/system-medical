@@ -1,3 +1,27 @@
+<?php
+session_start();
+include('config.php');
+
+// Verifica se o usuário está logado
+if (isset($_SESSION['usuario'])) {
+    // Se o usuário estiver logado, recupera o nome do usuário usando o id_usuario
+    $idUsuario = $_SESSION['usuario'];
+
+    // Consulta para pegar o nome do usuário
+    $sql = "SELECT nome_usuario FROM usuario WHERE id_usuario = '$idUsuario'";
+    $res = $conn->query($sql);
+    
+    if ($res->num_rows > 0) {
+        $dado = $res->fetch_assoc();
+        $nomeUsuario = $dado['nome_usuario'];
+    } else {
+        $nomeUsuario = 'Usuário não encontrado';
+    }
+} else {
+    $nomeUsuario = null;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -79,16 +103,43 @@
       <div>
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <a class="nav-link active" aria-current="page" href="index.php">Inicio</a>
-            <a class="nav-link active" aria-current="page" href="#servicos">Serviços</a>               
+            <a class="nav-link active" aria-current="page" href="#servicos">Serviços</a>
             <a class="nav-link" href="#equipe" role="button" aria-expanded="false">Equipe</a>
             <a class="nav-link" href="#localizacao" role="button" aria-expanded="false">Localização</a>
             <a class="nav-link" href="#sobre" role="button" aria-expanded="false">Sobre</a>
-            <a class="nav-link" href="login.php">Entrar / Cadastrar</a>
-          </li>
+
+            <!-- Verifica se o usuário está logado -->
+            <?php if ($nomeUsuario): ?>
+                <!-- Dropdown para o usuário logado -->
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <?php echo htmlspecialchars($nomeUsuario); ?>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <!-- Adiciona o link de "Minhas Consultas" e "Meus Dados" -->
+                        <li><a class="dropdown-item" href="minhas-consultas.php">Minhas Consultas</a></li>
+                        <li><a class="dropdown-item" href="meus-dados.php">Meus Dados</a></li>
+
+                        <!-- Verifica o nível de acesso do usuário -->
+                        <?php if ($_SESSION['nivel_acesso'] != 'paciente'): ?>
+                            <!-- Exibe o link "Painel Administrativo" para usuários não-pacientes -->
+                            <li><a class="dropdown-item" href="paineladm.php">Painél Administrativo</a></li>
+                        <?php endif; ?>
+
+                        <!-- Link de logout -->
+                        <li><a class="dropdown-item" href="logout.php">Sair</a></li>
+                    </ul>
+                </div>
+            <?php else: ?>
+                <!-- Exibe os links de "Entrar" e "Cadastrar" caso o usuário não esteja logado -->
+                <a class="nav-link" href="login.php">Entrar / Cadastrar</a>
+            <?php endif; ?>
         </ul>
       </div>
    </div>
-</nav> 
+</nav>
+
+
 
 <div class="container-fluidcolor-line"></div>
 

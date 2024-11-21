@@ -1,7 +1,35 @@
 <?php
 include('protect.php');
 protect();
+include('config.php');
+
+// Função para recuperar o nome do usuário
+function getNomeUsuario($conn, $idUsuario) {
+    $sql = "SELECT nome_usuario FROM usuario WHERE id_usuario = '$idUsuario'";
+    $res = $conn->query($sql);
+
+    if ($res->num_rows > 0) {
+        $dado = $res->fetch_assoc();
+        return $dado['nome_usuario'];
+    } else {
+        return 'Usuário não encontrado';
+    }
+}
+
+$nomeUsuario = null;
+if (isset($_SESSION['usuario'])) {
+    $idUsuario = $_SESSION['usuario'];
+    $nomeUsuario = getNomeUsuario($conn, $idUsuario);
+
+    // Verificar o nível de acesso do usuário
+    if (isset($_SESSION['nivel_acesso']) && $_SESSION['nivel_acesso'] == 'paciente') {
+        // Redirecionar para a página de login.php caso o nível de acesso seja 'paciente'
+        header("Location: login.php");
+        exit(); // Interrompe a execução do script
+    }
+}
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -97,7 +125,7 @@ protect();
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link <?php echo (!isset($_REQUEST['page']) || $_REQUEST['page'] == 'home') ? 'active' : ''; ?>" href="indexadm.php?page=home">Inicio</a>
+            <a class="nav-link <?php echo (!isset($_REQUEST['page']) || $_REQUEST['page'] == 'home') ? 'active' : ''; ?>" href="paineladm.php?page=home">Inicio</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -121,6 +149,9 @@ protect();
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Consultas
             </a>
+            <li class="nav-item">
+            <a class="nav-link <?php echo (!isset($_REQUEST['page']) || $_REQUEST['page'] == 'home') ? 'active' : ''; ?>" href="index.php?page=home">Voltar a página inicial</a>
+          </li>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="?page=cadastrar-consulta">Cadastrar</a></li>
               <li><a class="dropdown-item" href="?page=listar-consulta">Listar</a></li>
@@ -129,7 +160,23 @@ protect();
         </ul>
       </div>
       <div>
-        <a class="nav-link" href="login.php">Login</a>
+      <?php if ($nomeUsuario): ?>
+                <!-- Dropdown para o usuário logado -->
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <?php echo htmlspecialchars($nomeUsuario); ?>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <!-- Adiciona o link de "Minhas Consultas" e "Meus Dados" -->
+                        <li><a class="dropdown-item" href="minhas-consultas.php">Minhas Consultas</a></li>
+                        <li><a class="dropdown-item" href="meus-dados.php">Meus Dados</a></li>
+                        <!-- Link de logout -->
+                        <li><a class="dropdown-item" href="logout.php">Sair</a></li>
+                    </ul>
+                </div>
+            <?php else: ?>
+              
+            <?php endif; ?>
       </div>
    </div>
 </nav> 
@@ -139,7 +186,7 @@ protect();
     <div class="row mt-3">
         <div class="col">
             <?php 
-                include('config.php'); // Arquivo de conexão com o banco
+
 
                 // Switch para carregar a página correspondente de acordo com o parâmetro 'page'
                 switch (@$_REQUEST['page']) {
