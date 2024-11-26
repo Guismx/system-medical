@@ -100,6 +100,9 @@ if (isset($_SESSION['usuario'])) {
 </head>
 
 <body>
+<button class="scrollTop" onclick="backTop();">
+  <img src="./assets/logo-seta.png" alt="" />
+</button>
 <nav class="navbar navbar-expand-lg bg-dark">
    <div class="container-nav">
       <a class="navbar-brand" href="index.php">
@@ -352,10 +355,10 @@ if (isset($_SESSION['usuario'])) {
           <ul>
             <li><b>NAVEGAÇÃO</b></li><br>
             <li><a href="">Inicio</a></li>
-            <li><a href="">Serviços</a></li>
-            <li><a href="">Equipe</a></li>
-            <li><a href="">Localização</a></li>
-            <li><a href="">Sobre</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#equipe">Equipe</a></li>
+            <li><a href="#localizacao">Localização</a></li>
+            <li><a href="#sobre">Sobre</a></li>
           </ul>
         </div>
         <div class="info-clinica-rodape">

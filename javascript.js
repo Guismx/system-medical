@@ -64,3 +64,18 @@ document.getElementById("toggle-cards").addEventListener("click", function () {
         arrow.classList.add("down"); // Muda a seta para baixo
     }
 });
+
+
+// BOTÃO DE VOLTAR AO TOPO
+
+window.addEventListener("scroll", function () {
+    let scroll = document.querySelector(".scrollTop");
+    scroll.classList.toggle("active", window.scrollY > 450);
+  });
+  
+  function backTop() {
+    window.scrollTo({
+      top: 1,
+      behavior: "smooth",
+    });
+  }

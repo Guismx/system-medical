@@ -225,34 +225,7 @@ body {
     color: #00ffe0a6;
   }
   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* CONTAINER EQUIPE */
-
-
 .into-equipe {
     margin: 0 auto;
     max-width: 1200px;
@@ -345,8 +318,6 @@ body {
 .expand-btn:hover {
     text-decoration: underline;
 }
-
-
 
 /* CONTAINER LOCALIZAÇÃO */
 
@@ -514,7 +485,6 @@ footer {
 }
 
 /* CSS  PÁGINA DE LOGIN */
-
 .container-login {
     height: 100%;
     width: 100%;
@@ -688,10 +658,7 @@ footer {
     color: #00ffe0;
 }
 
-
-
 /* BOTÃO VER MAIS E VER MENOS */
-/* Estilo do botão geral */
 .toggle-btn {
     background: transparent;
     border: none;
@@ -741,3 +708,30 @@ footer {
 .toggle-arrow.up {
     transform: rotate(-90deg); /* Aponta para cima */
 }
+
+
+/* SETA PARA VOLTAR AO TOPO DA PÁGINA-------------------------------------------------------*/
+.scrollTop {
+    border: 0;
+    opacity: 0;
+    z-index: 999;
+    display: flex;
+    outline: none;
+    width: 2.5rem;
+    right: 1.87rem;
+    height: 2.5rem;
+    bottom: 1.87rem;
+    position: fixed;
+    cursor: pointer;
+    background: none;
+    border-radius: 50%;
+    visibility: hidden;
+    transition: all.4s ease;
+  }
+  .scrollTop.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  .scrollTop img {
+    width: 100%;
+  }
