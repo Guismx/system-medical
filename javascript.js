@@ -44,3 +44,23 @@ nextButton.addEventListener('click', () => {
 
 // Inicializa o carrossel
 updateCarousel();
+
+
+// BOTÃO PARA MOSTRAR MAIS E MOSTRAR MENOS (PAGINA INICIAL)
+document.getElementById("toggle-cards").addEventListener("click", function () {
+    const additionalCards = document.querySelector(".additional-cards");
+    const text = this.querySelector(".toggle-text");
+    const arrow = this.querySelector(".toggle-arrow");
+
+    if (additionalCards.style.display === "none") {
+        additionalCards.style.display = "block"; // Mostra os cards
+        text.textContent = "Ver menos"; // Muda o texto
+        arrow.classList.remove("down");
+        arrow.classList.add("up"); // Muda a seta para cima
+    } else {
+        additionalCards.style.display = "none"; // Oculta os cards
+        text.textContent = "Ver mais"; // Muda o texto
+        arrow.classList.remove("up");
+        arrow.classList.add("down"); // Muda a seta para baixo
+    }
+});

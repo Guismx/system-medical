@@ -1,3 +1,10 @@
+<!-- 
+ https://uiverse.io/xopc333/modern-stingray-68
+ https://uiverse.io/EcheverriaJesus/nasty-zebra-71
+ https://uiverse.io/ArturCodeCraft/afraid-fish-22
+
+-->
+
 <?php
 session_start();
 include('config.php');
@@ -220,8 +227,10 @@ if (isset($_SESSION['usuario'])) {
   <div class="into-equipe">
     <div>
       <h3>Nossa Equipe</h3>
-      <div class="container-fluidcolor-line"></div> 
+      <div class="container-fluidcolor-line"></div>
     </div>
+    
+    <!-- Primeiro card visível -->
     <div class="banner-equipe">
       <div class="dado-equipe">
         <img src="./assets/medico-1.png" alt="">
@@ -229,36 +238,46 @@ if (isset($_SESSION['usuario'])) {
         <p>Cardiologista</p>
         <p><b>CRM:</b> XXX.XXX.XXX</p>
       </div>
+      <div class="infor-equipe">
+        <p> Dra. Anna é cardiologista clínica e intervencionista, formada pela Universidade de São Paulo (USP) e com especialização em cardiologia intervencionista pelo Instituto Dante Pazzanese de Cardiologia. Com vasta experiência em instituições renomadas como o Hospital do Coração (HCor) e o Hospital Albert Einstein, Dra. Anna é especializada em procedimentos como cateterismo cardíaco e angioplastia, além de realizar atendimentos clínicos para pacientes com doenças cardiovasculares. Ao longo de sua carreira, ela também atuou na prevenção e educação em saúde cardíaca, completando capacitações em arritmias e suporte avançado de vida em cardiologia.</p>
+        </p>
+      </div>
+    </div>
+    
+    <!-- Cards adicionais inicialmente ocultos -->
+    <div class="additional-cards" style="display: none;">
+      <div class="banner-equipe2">
+        <div class="infor-equipe2">
+          <p> Dra. Anna é cardiologista clínica e intervencionista, formada pela Universidade de São Paulo (USP) e com especialização em cardiologia intervencionista pelo Instituto Dante Pazzanese de Cardiologia. Com vasta experiência em instituições renomadas como o Hospital do Coração (HCor) e o Hospital Albert Einstein, Dra. Anna é especializada em procedimentos como cateterismo cardíaco e angioplastia, além de realizar atendimentos clínicos para pacientes com doenças cardiovasculares. Ao longo de sua carreira, ela também atuou na prevenção e educação em saúde cardíaca, completando capacitações em arritmias e suporte avançado de vida em cardiologia.</p>
+          </p>
+        </div>
+        <div class="dado-equipe2">
+          <img src="./assets/medico-1.png" alt="">
+          <h6>Dra. Anna Luiza</h6>
+          <p>Cardiologista</p>
+          <p><b>CRM: </b>XXX.XXX.XXX</p>
+        </div>
+      </div>
       
-      <div class="infor-equipe">
-        <p>
-          Dra. Anna é cardiologista clínica e intervencionista, formada pela Universidade de São Paulo (USP) e com especialização em cardiologia intervencionista pelo Instituto Dante Pazzanese de Cardiologia. Com vasta experiência em instituições renomadas como o Hospital do Coração (HCor) e o Hospital Albert Einstein, Dra. Anna é especializada em procedimentos como cateterismo cardíaco e angioplastia, além de realizar atendimentos clínicos para pacientes com doenças cardiovasculares. Ao longo de sua carreira, ela também atuou na prevenção e educação em saúde cardíaca, completando capacitações em arritmias e suporte avançado de vida em cardiologia.</p>
+      <div class="banner-equipe">
+        <div class="dado-equipe">
+          <img src="./assets/medico-1.png" alt="">
+          <h6>Dra. Anna Luiza</h6>
+          <p>Cardiologista</p>
+          <p><b>CRM: </b>XXX.XXX.XXX</p>
+        </div>
+        <div class="infor-equipe">
+          <p> Dra. Anna é cardiologista clínica e intervencionista, formada pela Universidade de São Paulo (USP) e com especialização em cardiologia intervencionista pelo Instituto Dante Pazzanese de Cardiologia. Com vasta experiência em instituições renomadas como o Hospital do Coração (HCor) e o Hospital Albert Einstein, Dra. Anna é especializada em procedimentos como cateterismo cardíaco e angioplastia, além de realizar atendimentos clínicos para pacientes com doenças cardiovasculares. Ao longo de sua carreira, ela também atuou na prevenção e educação em saúde cardíaca, completando capacitações em arritmias e suporte avançado de vida em cardiologia.</p>
+          </p>
+        </div>
       </div>
     </div>
 
-    <div class="banner-equipe2">
-    <div class="infor-equipe2">
-        <p>Dra. Anna é cardiologista clínica e intervencionista, formada pela Universidade de São Paulo (USP) e com especialização em cardiologia intervencionista pelo Instituto Dante Pazzanese de Cardiologia. Com vasta experiência em instituições renomadas como o Hospital do Coração (HCor) e o Hospital Albert Einstein, Dra. Anna é especializada em procedimentos como cateterismo cardíaco e angioplastia, além de realizar atendimentos clínicos para pacientes com doenças cardiovasculares. Ao longo de sua carreira, ela também atuou na prevenção e educação em saúde cardíaca, completando capacitações em arritmias e suporte avançado de vida em cardiologia.</p>
-      </div>
-      <div class="dado-equipe2">
-        <img src="./assets/medico-1.png" alt="">
-        <h6>Dra. Anna Luiza</h6>
-        <p>Cardiologista</p>
-        <p><b>CRM: </b>XXX.XXX.XXX</p>
-      </div>
-    </div>
-
-    <div class="banner-equipe">
-      <div class="dado-equipe">
-        <img src="./assets/medico-1.png" alt="">
-        <h6>Dra. Anna Luiza</h6>
-        <p>Cardiologista</p>
-        <p><b>CRM: </b>XXX.XXX.XXX</p>
-      </div>
-      <div class="infor-equipe">
-        <p>Dra. Anna é cardiologista clínica e intervencionista, formada pela Universidade de São Paulo (USP) e com especialização em cardiologia intervencionista pelo Instituto Dante Pazzanese de Cardiologia. Com vasta experiência em instituições renomadas como o Hospital do Coração (HCor) e o Hospital Albert Einstein, Dra. Anna é especializada em procedimentos como cateterismo cardíaco e angioplastia, além de realizar atendimentos clínicos para pacientes com doenças cardiovasculares. Ao longo de sua carreira, ela também atuou na prevenção e educação em saúde cardíaca, completando capacitações em arritmias e suporte avançado de vida em cardiologia.</p>
-      </div>
-    </div>
+    <!-- Botão para expandir -->
+    <button class="toggle-btn" id="toggle-cards">
+      <span class="toggle-text">Ver mais</span>
+      <span class="toggle-arrow down">></span>
+    </button>
   </div>
 </div>
 
