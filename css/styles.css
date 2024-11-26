@@ -474,24 +474,23 @@ footer {
     color: #ffffff;
 }
 .receber-novidades-rodape {
-    align-items: center;
     display: flex;
     align-items: center;
     flex-direction: column;
 }
-.receber-novidades-rodape {
-    display: flex; /* Organiza o input e o botão em uma linha */
-}
 
 .receber-novidades-rodape input {
-    background: linear-gradient(to right, #0c0c0c, rgb(29, 29, 29), rgb(29, 29, 29), #0c0c0c);
+    background: none;
+    color: rgb(0, 255, 200);
+    border: none;
+    outline: none;
+    box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
     width: 300px;
     height: 30px;
-    border: 1px solid black;
-    border-right: none; /* Remove a borda direita para unir com o botão */
-    border-radius: 10px 0 0 10px;
-    color: white;
-    outline: none;
+    border-radius: 25px;
+    padding-left: 10px;
+    max-width: 300px;
+    font-size: 1em;
 }
 
 .receber-novidades-rodape button {
@@ -499,14 +498,21 @@ footer {
     justify-content: center;
     width: 70px;
     height: 30px;
-    color: #ffffff;
-    background: linear-gradient(to right, #0c0c0c, rgb(29, 29, 29), rgb(29, 29, 29), #0c0c0c);
-    border: 1px solid black;
-    border-left: none; /* Remove a borda esquerda para unir com o input */
-    border-radius: 0 10px 10px 0;
+    background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    border: none;
+    outline: none;
     cursor: pointer;
-    margin-left: 0;
+    margin-left: 0.5em;
+    transition: .4s ease-in-out;
 }
+
+.receber-novidades-rodape button:hover {
+    background-image: linear-gradient(163deg, #00642f 0%, #13034b 100%);
+    color: rgb(0, 255, 200);
+}
+
 /* CSS  PÁGINA DE LOGIN */
 
 .container-login {

@@ -149,6 +149,10 @@ if (isset($_SESSION['usuario'])) {
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Consultas
             </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="?page=cadastrar-consulta">Cadastrar</a></li>
+              <li><a class="dropdown-item" href="?page=listar-consulta">Listar</a></li>
+            </ul>
             <li class="nav-item">
             <a class="nav-link <?php echo (!isset($_REQUEST['page']) || $_REQUEST['page'] == 'home') ? 'active' : ''; ?>" href="index.php?page=home">Voltar a página inicial</a>
           </li>

@@ -12,6 +12,8 @@
         margin-bottom: 1rem;
         display: block;
         font-size: 1rem;
+        text-align: center;  /* Centraliza a mensagem */
+        color: #fff;
     }
 
     table {
@@ -55,8 +57,9 @@
 
     $qtd = $res->num_rows;
 
+    // Exibe a quantidade de resultados encontrados de forma centralizada
     if ($qtd > 0) {
-        print "<p>Encontrou <b>$qtd</b> resultado(s)<p>";
+        print "<p>Encontrou <b>$qtd</b> resultado(s)</p>";
         print "<table class='table table-bordered'>";
         print "<tr>";
         print "<th>#</th>";
@@ -84,6 +87,6 @@
         }
         print "</table>";
     } else {
-        print "Não encontrou resultado";
+        print "<p>Não encontrou resultado</p>";  // Centraliza também a mensagem quando não encontrar resultados
     }
 ?>
