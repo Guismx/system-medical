@@ -1,10 +1,3 @@
-<!-- 
- https://uiverse.io/xopc333/modern-stingray-68
- https://uiverse.io/EcheverriaJesus/nasty-zebra-71
- https://uiverse.io/ArturCodeCraft/afraid-fish-22
-
--->
-
 <?php
 session_start();
 include('config.php');
@@ -133,7 +126,7 @@ if (isset($_SESSION['usuario'])) {
                         <!-- Verifica o nível de acesso do usuário -->
                         <?php if ($_SESSION['nivel_acesso'] != 'paciente'): ?>
                             <!-- Exibe o link "Painel Administrativo" para usuários não-pacientes -->
-                            <li><a class="dropdown-item" href="paineladm.php">Painél Administrativo</a></li>
+                            <li><a class="dropdown-item" href="paineladm.php">Painel Administrativo</a></li>
                         <?php endif; ?>
 
                         <!-- Link de logout -->
@@ -219,9 +212,18 @@ if (isset($_SESSION['usuario'])) {
   </div>
     <!--#COMENTÁRIO Navegação do Carrossel -->
     <div class="carousel-controls">
-      <button class="prev">←</button>
-      <button class="next">→</button>
+      <button class="prev button-next">
+        <span class="button-next-box">
+          <span class="button-next-elem"></span>
+        </span>
+      </button>
+      <button class="next button-next">
+        <span class="button-next-box">
+          <span class="button-next-elem"></span>
+        </span>
+      </button>     
     </div>
+
   </div>
 </div>
 

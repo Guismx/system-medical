@@ -83,31 +83,16 @@ body {
     height: 600px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* CARROUSEL DE SERVIÇOS */
-
 .container-servicos {
     color: rgb(255, 255, 255);
     background-color: transparent;
     max-width: 1200px;
     margin: 0 auto;
     margin-top: 2rem;
-  }
+}
   
-  .into-servicos {
+.into-servicos {
     margin: 0 auto;
     max-width: 1200px;
     flex-direction: column;
@@ -118,37 +103,37 @@ body {
     padding: 1rem;
     border-radius: 10px;
     margin-bottom: 1rem;
-  }
+}
   
-  .servicos-carousel {
+.servicos-carousel {
     position: relative;
     width: 100%;
     overflow: hidden;
-  }
+}
   
-  .servicos-index {
+.servicos-index {
     display: flex;
     transition: transform 0.5s ease-in-out; /* Animação suave */
-  }
+}
   
-  .pagina {
+.pagina {
     flex-shrink: 0;
     width: 100%; /* Cada página ocupa 100% da largura do container */
-  }
+}
   /* Classes para definir a posição no slide */
-  .pagina.previous {
+.pagina.previous {
     transform: translateX(-100%); /* Fora da tela à esquerda */
-  }
+}
   
-  .pagina.next {
+.pagina.next {
     transform: translateX(100%); /* Fora da tela à direita */
-  }
+}
   
-  .pagina.active {
+.pagina.active {
     transform: translateX(0); /* Centralizada */
-  }
+}
   
-  .card-index {
+.card-index {
     margin: 1rem;
     padding: 10px;
     width: 290px;
@@ -161,32 +146,28 @@ body {
     box-sizing: border-box;
     border-right: 1px solid rgb(255, 255, 255);
     border-bottom: 1px solid rgb(255, 255, 255);
-  }
+}
   
-  .card-index:hover {
+.card-index:hover {
     background-color: #1b1b1b;
     border-right: 1px solid #00ffe0a6;
     border-bottom: 1px solid #00ffe0a6;
-  }
+}
   
-  .servicos-index img {
+.servicos-index img {
     width: 100%;
     height: 150px;
     border-radius: 10px;
-  }
-  
-  .carousel-controls {
-    text-align: center;
-  }
-  
-  .card-index {
+}
+ 
+.card-index {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  }
+}
   
-  .card-index a {
+.card-index a {
     justify-content: center;
     display: flex;
     color: white;
@@ -196,9 +177,9 @@ body {
     align-items: center;
     border-radius: 10px;
     border: 1px solid #00ffe0a6;
-  }
+}
   
-  .card-index a:hover {
+.card-index a:hover {
     justify-content: center;
     display: flex;
     color: #00ffe0a6;
@@ -208,22 +189,88 @@ body {
     align-items: center;
     border-radius: 10px;
     border: 1px solid #00ffe0a6;
+}
+.carousel-controls {
+    text-align: center;
+    display: flex;
+    justify-content: center;
   }
   
-  .carousel-controls button {
-    border-radius: 50%;
-    background-color: rgb(37, 37, 37);
-    color: white;
-    border: none;
-    padding: 10px;
-    margin: 0 10px;
+.carousel-controls button {
+    display: block;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    outline: none;
+    background-color: transparent;
     cursor: pointer;
-    font-size: 18px;
-  }
+    border: 0;
+}
   
-  .carousel-controls button:hover {
+.carousel-controls .button-next:before,
+.carousel-controls .button-next:after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    inset: 10px;
+}
+  
+.carousel-controls .button-next:before {
+    border: 4px solid #00ffe0a6;
+    transition: opacity 0.4s cubic-bezier(0.77, 0, 0.175, 1) 80ms,
+      transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 80ms;
+}
+  
+.carousel-controls .button-next:after {
+    border: 4px solid #96daf0;
+    transform: scale(1.3);
+    transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+      transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    opacity: 0;
+}
+  
+.carousel-controls .button-next:hover:before,
+.carousel-controls .button-next:focus:before {
+    opacity: 0;
+    transform: scale(0.7);
+    transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+      transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+  
+.carousel-controls .button-next:hover:after,
+.carousel-controls .button-next:focus:after {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.4s cubic-bezier(0.77, 0, 0.175, 1) 80ms,
+      transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 80ms;
+}
+  
+.carousel-controls .button-next-box {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+  
+.carousel-controls .button-next-elem {
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin: 17px 18px 0 18px;
+    transform: rotate(180deg);
+    fill: #f0eeef;
+}
+  
+.carousel-controls .button-next:hover .button-box,
+.carousel-controls .button-next:focus .button-box {
+    transition: 0.4s;
+    transform: translateX(-1px);
+}
+  
+.carousel-controls button:hover {
     color: #00ffe0a6;
-  }
+}
   
 /* CONTAINER EQUIPE */
 .into-equipe {
@@ -359,9 +406,7 @@ body {
 .sobre-principal img {
     width: 25%;
 }
-.container-sobre {
-    width: 100%;
-}
+
 .container-into {
     max-width: 1200px;
     border-radius: 10px;
