@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('config.php');
+include('./config-db/config.php');
 
 // Verifica se o usuário está logado
 if (isset($_SESSION['usuario'])) {
@@ -28,9 +28,8 @@ if (isset($_SESSION['usuario'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MGC Clinic</title>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    
-    <link rel="stylesheet" href="css/styles.css">    
+    <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">    
 <style>
       .navbar-nav .nav-link.active {
         color: #00ffe0a6;
@@ -94,12 +93,12 @@ if (isset($_SESSION['usuario'])) {
 
 <body>
 <button class="scrollTop" onclick="backTop();">
-  <img src="./assets/logo-seta.png" alt="" />
+  <img src="./assets/images/logos/logo-seta.png" alt="" />
 </button>
 <nav class="navbar navbar-expand-lg bg-dark">
    <div class="container-nav">
       <a class="navbar-brand" href="index.php">
-        <img src="assets/logo.png" style="width: 60px" alt="">
+        <img src="./assets/images/logos/logo.png" style="width: 60px" alt="">
       </a>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
       </div>
@@ -126,16 +125,16 @@ if (isset($_SESSION['usuario'])) {
                         <!-- Verifica o nível de acesso do usuário -->
                         <?php if ($_SESSION['nivel_acesso'] != 'paciente'): ?>
                             <!-- Exibe o link "Painel Administrativo" para usuários não-pacientes -->
-                            <li><a class="dropdown-item" href="paineladm.php">Painel Administrativo</a></li>
+                            <li><a class="dropdown-item" href="./admin/paineladm.php">Painel Administrativo</a></li>
                         <?php endif; ?>
 
                         <!-- Link de logout -->
-                        <li><a class="dropdown-item" href="logout.php">Sair</a></li>
+                        <li><a class="dropdown-item" href="./auth/logout.php">Sair</a></li>
                     </ul>
                 </div>
             <?php else: ?>
                 <!-- Exibe os links de "Entrar" e "Cadastrar" caso o usuário não esteja logado -->
-                <a class="nav-link" href="login.php">Entrar / Cadastrar</a>
+                <a class="nav-link" href="./auth/login.php">Entrar / Cadastrar</a>
             <?php endif; ?>
         </ul>
       </div>
@@ -143,7 +142,7 @@ if (isset($_SESSION['usuario'])) {
 </nav>
 <div class="container-fluidcolor-line"></div>
 <div class="container-banner">
-    <img src="assets/banner1.png" alt="Banner">
+    <img src="assets/images/banners/banner1.png" alt="Banner">
 </div>
 
 <div class="container-servicos" id="servicos">
@@ -156,25 +155,25 @@ if (isset($_SESSION['usuario'])) {
      <!--COMENTÁRIO Primeiro conjunto de 4 Cards -->
     <div class="servicos-index pagina">
       <div class="card-index">
-        <img src="./assets/consulta-geral.png" alt="">
+        <img src="./assets/images/outros/consulta-geral.png" alt="">
         <h5><b>Consulta Médica Geral</b></h5>
         <p>Avaliação clínica completa do paciente, abordando histórico médico, sintomas atuais e realização de exames físicos.</p>
         <a href="#" class="ver-mais">Ver mais</a>
       </div>
       <div class="card-index">
-        <img src="./assets/exames-laboratoriais.png" alt="">
+        <img src="./assets/images/outros/exames-laboratoriais.png" alt="">
         <h5><b>Exames Laboratoriais</b></h5>
         <p>Conjunto de exames de sangue, urina, fezes e outros fluidos corporais para diagnóstico de doenças.</p>
         <a href="#" class="ver-mais">Ver mais</a>
       </div>
       <div class="card-index">
-        <img src="./assets/consulta-especialiazada.png" alt="">
+        <img src="./assets/images/outros/consulta-especialiazada.png" alt="">
         <h5><b>Consultas Especializadas</b></h5>
         <p>Atendimento realizado por médicos especialistas, como cardiologistas, dermatologistas, endocrinologistas, entre outros.</p>
         <a href="#" class="ver-mais">Ver mais</a>
       </div>
       <div class="card-index">
-        <img src="./assets/consulta-pediatra.png" alt="">
+        <img src="./assets/images/outros/consulta-pediatra.png" alt="">
         <h5><b>Consulta Pediátrica</b></h5>
         <p>Atendimento médico especializado para crianças e adolescentes, com foco na avaliação do crescimento.</p>
         <a href="#" class="ver-mais">Ver mais</a>
@@ -184,25 +183,25 @@ if (isset($_SESSION['usuario'])) {
     <!--COMENTÁRIO Segundo conjunto de 4 Cards --> 
     <div class="servicos-index pagina">
       <div class="card-index">
-        <img src="./assets/consulta-odontologica.png" alt="">
+        <img src="./assets/images/outros/consulta-odontologica.png" alt="">
         <h5><b>Consulta Odontológica</b></h5>
         <p>Consultas de rotina com foco em prevenção e tratamento de problemas dentários, como cáries e doenças gengivais.</p>
         <a href="#" class="ver-mais">Ver mais</a>
       </div>
       <div class="card-index">
-        <img src="./assets/fisioterapia.png" alt="">
+        <img src="./assets/images/outros/fisioterapia.png" alt="">
         <h5><b>Fisioterapia</b></h5>
         <p>Tratamento fisioterápico para recuperação de movimentos, reabilitação muscular e redução de dores articulares.</p>
         <a href="#" class="ver-mais">Ver mais</a>
       </div>
       <div class="card-index">
-        <img src="./assets/consulta-psiquiatra.png" alt="">
+        <img src="./assets/images/outros/consulta-psiquiatra.png" alt="">
         <h5><b>Consulta Psiquiátrica</b></h5>
         <p>Avaliação e tratamento para transtornos mentais, distúrbios emocionais e doenças psicológicas.</p>
         <a href="#" class="ver-mais">Ver mais</a>
       </div>
       <div class="card-index">
-        <img src="./assets/consulta-nutricional.png" alt="">
+        <img src="./assets/images/outros/consulta-nutricional.png" alt="">
         <h5><b>Consulta Nutricional</b></h5>
         <p>Orientação sobre hábitos alimentares, controle de peso e dieta específica para condições de saúde.</p>
         <a href="#" class="ver-mais">Ver mais</a>
@@ -238,7 +237,7 @@ if (isset($_SESSION['usuario'])) {
     <!-- Primeiro card visível -->
     <div class="banner-equipe">
       <div class="dado-equipe">
-        <img src="./assets/medico-1.png" alt="">
+        <img src="./assets/images/outros/medico-1.png" alt="">
         <h6>Dra. Anna Luiza</h6>
         <p>Cardiologista</p>
         <p><b>CRM:</b> XXX.XXX.XXX</p>
@@ -257,7 +256,7 @@ if (isset($_SESSION['usuario'])) {
           </p>
         </div>
         <div class="dado-equipe2">
-          <img src="./assets/medico-1.png" alt="">
+          <img src="./assets/images/outros/medico-1.png" alt="">
           <h6>Dra. Anna Luiza</h6>
           <p>Cardiologista</p>
           <p><b>CRM: </b>XXX.XXX.XXX</p>
@@ -266,7 +265,7 @@ if (isset($_SESSION['usuario'])) {
       
       <div class="banner-equipe">
         <div class="dado-equipe">
-          <img src="./assets/medico-1.png" alt="">
+          <img src="./assets/images/outros/medico-1.png" alt="">
           <h6>Dra. Anna Luiza</h6>
           <p>Cardiologista</p>
           <p><b>CRM: </b>XXX.XXX.XXX</p>
@@ -318,28 +317,28 @@ if (isset($_SESSION['usuario'])) {
   </div>
   <div class="sobre-principal">
     <p>A <b style="color: #00ffe0a6">MGC Clinic</b> foi fundada com o propósito de oferecer um atendimento médico de excelência, pautado no compromisso com a saúde e bem-estar dos nossos pacientes. Ao longo dos anos, crescemos e nos consolidamos como uma clínica de referência na região, sempre investindo em inovação e em uma equipe de profissionais altamente qualificados. Desde a nossa inauguração, buscamos integrar tecnologia de ponta e um atendimento humanizado, com a missão de proporcionar cuidado médico integral em todas as fases da vida. Através de uma gestão eficiente e uma visão voltada para a qualidade, a <b style="color: #00ffe0a6">MGC Clinic</b> se tornou um espaço confiável e acolhedor, onde nossos pacientes encontram não apenas tratamentos especializados, mas também um atendimento dedicado e personalizado. Nossa trajetória é marcada pela busca constante por melhorias, pela construção de uma rede de confiança com nossos pacientes e pela promoção da saúde com ética, respeito e competência.</p>
-    <img src="assets/equipe-medicos.png.png" alt="">
+    <img src="./assets/images/outros/equipe-medicos.png.png" alt="">
   </div>
   <div class="cards-sobre">
     <div class="card-sobre">
-      <img class="img-icon" src="assets/icon-compromisso.png" alt="">
+      <img class="img-icon" src="./assets/images/icons/icon-compromisso.png" alt="">
       <h4>Compromisso com a Saúde</h4>
       <p>Priorizamos a prevenção, o diagnóstico precoce e o acompanhamento contínuo de nossos pacientes. Acreditamos que a saúde é um processo dinâmico, que exige atenção constante e cuidados em todas as fases da vida.</p>
     </div>
     <div class="card-sobre">
-      <img class="img-icon" src="assets/icon-visao.png" alt="">
+      <img class="img-icon" src="./assets/images/icons/icon-visao.png" alt="">
       <h4>Nossa Visão</h4>
       <p>Ser reconhecida como uma clínica de referência em excelência médica e atendimento humanizado, proporcionando aos nossos pacientes um ambiente seguro, acolhedor e de confiança.</p>
     </div>
   </div>
   <div class="cards-sobre">
     <div class="card-sobre">
-      <img class="img-icon" src="assets/icon-missao.png" alt="">
+      <img class="img-icon" src="./assets/images/icons/icon-missao.png" alt="">
       <h4>Nossa Missão</h4>
       <p>Oferecer cuidados médicos completos, com base em um atendimento técnico de alta qualidade e com um olhar atento às necessidades individuais de cada paciente. Trabalhamos para promover a saúde e qualidade de vida, com uma equipe comprometida em oferecer sempre o melhor.</p>
     </div>
     <div class="card-sobre">
-      <img class="img-icon" src="assets/icon-valores.png" alt="">
+      <img class="img-icon" src="./assets/images/icons/icon-valores.png" alt="">
       <h4>Valores</h4>
       <p>Compromisso com o paciente: Cuidamos de cada paciente com empatia, respeito e atenção.
       Excelência médica: Oferecemos tratamentos e diagnósticos com precisão, atualizados com as melhores práticas da medicina.
@@ -390,7 +389,6 @@ if (isset($_SESSION['usuario'])) {
   </div>
 </footer>
 <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
-<script src="javascript.js"></script>
+<script src="./assets/js/javascript.js"></script>
 </body>
-
 </html>

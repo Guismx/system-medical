@@ -1,5 +1,6 @@
 <?php
-include('config.php'); // Verifique se o arquivo config.php está configurado corretamente
+include('../../config-db/config.php');
+// Verifique se o arquivo config.php está configurado corretamente
 
 session_start(); // Inicia a sessão, se não estiver iniciada
 
@@ -43,7 +44,7 @@ if (isset($_POST['email']) && strlen($_POST['email']) > 0) {
 <html>
 <head>
     <title>Cadastro</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="../../assets/css/styles.css">
 </head>
 <body>
     <div class="container-login">
@@ -83,7 +84,7 @@ if (isset($_POST['email']) && strlen($_POST['email']) > 0) {
 					</div>
                     <div class="btn-login">
                         <input class="entrar" value="Cadastrar" type="submit">
-                        <input class="cadastrar" value="Voltar" type="button" onclick="window.location.href='login.php';">
+                        <input class="cadastrar" value="Voltar" type="button" onclick="window.location.href='../../auth/login.php';">
                     </div>
                 </form>
 

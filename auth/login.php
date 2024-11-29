@@ -1,5 +1,7 @@
 <?php
-    include('config.php'); // Verifique se o arquivo config.php está configurado corretamente
+
+    include('../config-db/config.php');
+
 
     session_start(); // Inicia a sessão, se não estiver iniciada
 
@@ -45,7 +47,9 @@
 <html>
 <head>
     <title>Login</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+
 </head>
 <body>
     <div class="container-login">
@@ -68,10 +72,10 @@
                     </div>
                     <div class="btn-login">
                         <input class="entrar" value="Entrar" type="submit">
-                        <input class="cadastrar" value="Cadastrar" type="button" onclick="window.location.href='cadastro-usuario.php';">
+                        <input class="cadastrar" value="Cadastrar" type="button" onclick="window.location.href='../backend/register/cadastro-usuario.php';">
 
                     </div>
-                    <input class="btn-voltar" value="Voltar" type="button" onclick="window.location.href='index.php';">
+                    <input class="btn-voltar" value="Voltar" type="button" onclick="window.location.href='../index.php';">
                     <a href="esqueceu-senha.php">Esqueceu sua senha?</a>
                 </form>
 
