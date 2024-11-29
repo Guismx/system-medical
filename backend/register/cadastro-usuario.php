@@ -44,6 +44,7 @@ if (isset($_POST['email']) && strlen($_POST['email']) > 0) {
 <html>
 <head>
     <title>Cadastro</title>
+    <link rel="stylesheet" type="text/css" href="../../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../assets/css/styles.css">
 </head>
 <body>

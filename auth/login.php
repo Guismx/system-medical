@@ -26,9 +26,9 @@
                 
                 // Redireciona o usuário com base no nível de acesso
                 if ($dado['nivel_acesso'] == 'paciente') {
-                    echo "<script>alert('Login efetuado com sucesso'); location.href='index.php';</script>";
+                    echo "<script>alert('Login efetuado com sucesso'); location.href='../index.php';</script>";
                 } else {
-                    echo "<script>alert('Login efetuado com sucesso'); location.href='index.php';</script>";
+                    echo "<script>alert('Login efetuado com sucesso'); location.href='../index.php';</script>";
                 }
             } else {
                 $erro[] = "Senha incorreta.";

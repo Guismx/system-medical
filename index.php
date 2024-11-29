@@ -125,7 +125,7 @@ if (isset($_SESSION['usuario'])) {
                         <!-- Verifica o nível de acesso do usuário -->
                         <?php if ($_SESSION['nivel_acesso'] != 'paciente'): ?>
                             <!-- Exibe o link "Painel Administrativo" para usuários não-pacientes -->
-                            <li><a class="dropdown-item" href="./admin/paineladm.php">Painel Administrativo</a></li>
+                            <li><a class="dropdown-item" href="admin/paineladm.php">Painel Administrativo</a></li>
                         <?php endif; ?>
 
                         <!-- Link de logout -->

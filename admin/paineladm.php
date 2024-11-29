@@ -1,7 +1,7 @@
 <?php
-include('protect.php');
+include('../auth/protect.php');
 protect();
-include('config.php');
+include('../config-db/config.php');
 
 // Função para recuperar o nome do usuário
 function getNomeUsuario($conn, $idUsuario) {
