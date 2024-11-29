@@ -125,7 +125,7 @@ if (isset($_SESSION['usuario'])) {
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link <?php echo (!isset($_REQUEST['page']) || $_REQUEST['page'] == 'home') ? 'active' : ''; ?>" href="paineladm.php?page=home">Inicio</a>
+            <a class="nav-link <?php echo (!isset($_REQUEST['page']) || $_REQUEST['page'] == 'home') ? 'active' : ''; ?>" href="../admin/paineladm.php?page=home">Inicio</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -133,7 +133,7 @@ if (isset($_SESSION['usuario'])) {
             </a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="?page=cadastrar-medico">Cadastrar</a></li>
-              <li><a class="dropdown-item" href="?page=listar-medico">Listar</a></li>
+              <li><a class="dropdown-item" href="?page=../views/list/listar-medico.php">Listar</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
@@ -154,7 +154,7 @@ if (isset($_SESSION['usuario'])) {
               <li><a class="dropdown-item" href="?page=listar-consulta">Listar</a></li>
             </ul>
             <li class="nav-item">
-            <a class="nav-link <?php echo (!isset($_REQUEST['page']) || $_REQUEST['page'] == 'home') ? 'active' : ''; ?>" href="index.php?page=home">Voltar a página inicial</a>
+            <a class="nav-link <?php echo (!isset($_REQUEST['page']) || $_REQUEST['page'] == 'home') ? 'active' : ''; ?>" href="../index.php?page=home">Voltar a página inicial</a>
           </li>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="?page=cadastrar-consulta">Cadastrar</a></li>
@@ -298,6 +298,6 @@ if (!isset($_REQUEST['page']) || $_REQUEST['page'] == 'home') {
 }
 ?>
 
-<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="../assets/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

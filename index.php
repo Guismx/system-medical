@@ -127,7 +127,6 @@ if (isset($_SESSION['usuario'])) {
                             <!-- Exibe o link "Painel Administrativo" para usuários não-pacientes -->
                             <li><a class="dropdown-item" href="admin/paineladm.php">Painel Administrativo</a></li>
                         <?php endif; ?>
-
                         <!-- Link de logout -->
                         <li><a class="dropdown-item" href="./auth/logout.php">Sair</a></li>
                     </ul>
@@ -388,7 +387,7 @@ if (isset($_SESSION['usuario'])) {
       </div>
   </div>
 </footer>
-<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="./assets/js/bootstrap.bundle.min.js"></script>
 <script src="./assets/js/javascript.js"></script>
 </body>
 </html>
