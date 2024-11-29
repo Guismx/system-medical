@@ -27,6 +27,6 @@
 
 <div class="container">
   <div class="banner">
-    <img src="assets/banner1.png" alt="Banner">
+    <img src="../assets/images/banners/banner1.png" alt="Banner">
   </div>
 </div>

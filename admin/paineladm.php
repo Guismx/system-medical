@@ -36,7 +36,7 @@ if (isset($_SESSION['usuario'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MGC Clinic</title>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css">
     <style>
       body {
         background:linear-gradient(to right, #0c0c0c, rgb(29, 29, 29), rgb(29, 29, 29), #0c0c0c);
@@ -120,7 +120,7 @@ if (isset($_SESSION['usuario'])) {
 <nav class="navbar navbar-expand-lg bg-dark">
    <div class="container-nav">
       <a class="navbar-brand" href="indexadm.php">
-        <img src="assets/logo.png" style="width: 60px" alt="">
+        <img src="../assets/images/logos/logo.png" style="width: 60px" alt="">
       </a>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -190,12 +190,10 @@ if (isset($_SESSION['usuario'])) {
     <div class="row mt-3">
         <div class="col">
             <?php 
-
-
                 // Switch para carregar a página correspondente de acordo com o parâmetro 'page'
                 switch (@$_REQUEST['page']) {
                     case 'cadastrar-medico':
-                        include('cadastrar-medico.php');
+                        include('backend/register/cadastrar-medico.php');
                         break;
                     case 'editar-medico':
                         include('editar-medico.php');
@@ -208,7 +206,7 @@ if (isset($_SESSION['usuario'])) {
                         break;  
                         
                     case 'cadastrar-paciente':
-                        include('cadastrar-paciente.php');
+                        include('backend/register/cadastrar-paciente.php');
                         break;
                     case 'editar-paciente':
                         include('editar-paciente.php');
@@ -222,7 +220,7 @@ if (isset($_SESSION['usuario'])) {
                             
 
                     case 'cadastrar-consulta':
-                        include('cadastrar-consulta.php');
+                        include('backend/register/cadastrar-consulta.php');
                         break;
                     case 'editar-consulta':
                         include('editar-consulta.php');
@@ -235,7 +233,7 @@ if (isset($_SESSION['usuario'])) {
                         break;  
                     
                     default:
-                        include('home.php'); // Página inicial
+                        include('../views/home.php'); // Página inicial
                 }
             ?>
         </div>
@@ -260,7 +258,7 @@ if (!isset($_REQUEST['page']) || $_REQUEST['page'] == 'home') {
         // Aqui você pode incluir a listagem de médicos
         switch (@$_REQUEST['page']) {
           default:
-            include('listar-paciente.php');
+            include('../views/list/listar-paciente.php');
         }
       ?>
     </div>
@@ -270,7 +268,7 @@ if (!isset($_REQUEST['page']) || $_REQUEST['page'] == 'home') {
         // Aqui você pode incluir a listagem de médicos
         switch (@$_REQUEST['page']) {
           default:
-            include('listar-medico.php');
+            include('../views/list/listar-medico.php');
         }
       ?>
     </div>
@@ -280,7 +278,7 @@ if (!isset($_REQUEST['page']) || $_REQUEST['page'] == 'home') {
         // Aqui você pode incluir a listagem de médicos
         switch (@$_REQUEST['page']) {
           default:
-            include('listar-consulta.php');
+            include('../views/list/listar-consulta.php');
         }
       ?>
   </div>
